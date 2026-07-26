@@ -792,6 +792,123 @@ section{
 
 
 
+
+
+
+/* ==========================
+   ORDER FORM
+========================== */
+
+
+.order{
+
+    background:#fffaf2;
+
+}
+
+
+
+.order-form{
+
+    max-width:600px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+
+.order-form input,
+.order-form select,
+.order-form textarea{
+
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    outline:none;
+
+
+}
+
+
+
+.order-form textarea{
+
+    height:120px;
+
+    resize:none;
+
+}
+
+
+
+
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus{
+
+    border-color:#8b4513;
+
+}
+
+
+
+
+
+.order-btn{
+
+
+    background:#25D366;
+
+    color:white;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.order-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+
+
 /* ==========================
    CONTACT SECTION
 ========================== */

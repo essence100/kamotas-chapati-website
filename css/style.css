@@ -148,8 +148,8 @@ header{
     background:
 
     linear-gradient(
-        rgba(0,0,0,.65),
-        rgba(0,0,0,.65)
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
     ),
 
     url("../assets/images/restaurant.jpg");
@@ -157,12 +157,18 @@ header{
 
     background-size:cover;
 
+
     background-position:center;
+
+
+    background-repeat:no-repeat;
 
 
     display:flex;
 
+
     align-items:center;
+
 
     justify-content:center;
 
@@ -173,10 +179,11 @@ header{
     color:white;
 
 
-    padding:80px 8% 0;
+    position:relative;
 
 
 }
+
 
 
 
@@ -190,7 +197,10 @@ header{
     padding:30px;
 
 
-    animation:heroAnimation 1.2s ease;
+    z-index:2;
+
+
+    animation:fadeHero 1.2s ease;
 
 
 }
@@ -208,21 +218,13 @@ header{
     font-weight:800;
 
 
-    line-height:1.15;
-
-
     margin-bottom:25px;
 
 
-    letter-spacing:.5px;
+    line-height:1.2;
 
 
-    text-transform:capitalize;
-
-
-    text-shadow:
-
-    0 5px 20px rgba(0,0,0,.5);
+    text-shadow:0 5px 20px rgba(0,0,0,.6);
 
 
 }
@@ -237,18 +239,19 @@ header{
     font-size:21px;
 
 
-    line-height:1.8;
+    max-width:700px;
+
+
+    margin:0 auto 35px;
 
 
     color:#f5f5f5;
 
 
-    margin-bottom:35px;
+    line-height:1.8;
 
 
 }
-
-
 
 
 
@@ -263,11 +266,7 @@ header{
     align-items:center;
 
 
-    justify-content:center;
-
-
     gap:10px;
-
 
 
     background:#ffd700;
@@ -276,26 +275,22 @@ header{
     color:#8b4513;
 
 
-
-    padding:16px 45px;
+    padding:16px 40px;
 
 
     border-radius:50px;
 
 
-    font-size:17px;
-
-
     font-weight:bold;
 
 
+    font-size:17px;
 
-    transition:.35s;
+
+    transition:.3s;
 
 
-    box-shadow:
-
-    0 10px 25px rgba(0,0,0,.3);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
 
 
 }
@@ -307,13 +302,22 @@ header{
 .btn:hover{
 
 
-    transform:translateY(-7px);
-
-
     background:white;
 
 
-    color:#8b4513;
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+
+.btn i{
+
+
+    font-size:20px;
 
 
 }
@@ -323,34 +327,26 @@ header{
 
 
 
+/* HERO ANIMATION */
 
-/* HERO ENTRY ANIMATION */
 
-
-@keyframes heroAnimation{
+@keyframes fadeHero{
 
 
     from{
 
-
         opacity:0;
 
-
-        transform:translateY(50px);
-
+        transform:translateY(40px);
 
     }
 
 
-
     to{
-
 
         opacity:1;
 
-
         transform:translateY(0);
-
 
     }
 
@@ -362,29 +358,15 @@ header{
 
 
 
-
-/* MOBILE HERO */
+/* MOBILE */
 
 
 @media(max-width:768px){
 
 
-
-.hero{
-
-
-    padding-top:100px;
-
-
-}
-
-
-
 .hero h1{
 
-
     font-size:38px;
-
 
 }
 
@@ -392,9 +374,7 @@ header{
 
 .hero p{
 
-
     font-size:17px;
-
 
 }
 
@@ -402,19 +382,7 @@ header{
 
 .hero-content{
 
-
-    padding:15px;
-
-
-}
-
-
-
-.btn{
-
-
-    padding:14px 35px;
-
+    padding:20px;
 
 }
 

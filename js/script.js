@@ -98,6 +98,64 @@ sections.forEach(section => {
 
 
 
+function sendOrder(event){
+
+    event.preventDefault();
+
+
+    let name = document.getElementById("name").value;
+
+    let phone = document.getElementById("phone").value;
+
+    let food = document.getElementById("food").value;
+
+    let quantity = document.getElementById("quantity").value;
+
+    let location = document.getElementById("location").value;
+
+    let message = document.getElementById("message").value;
+
+
+
+    let text = 
+`Hello Kamotas Chapati,
+
+New Order:
+
+Name: ${name}
+
+Phone: ${phone}
+
+Order: ${food}
+
+Quantity: ${quantity}
+
+Location: ${location}
+
+Message: ${message}
+
+Thank you.`;
+
+
+
+    let whatsapp = 
+    "https://wa.me/255782722871?text=" 
+    + encodeURIComponent(text);
+
+
+
+    window.open(whatsapp,"_blank");
+
+}
+
+
+
+
+
+
+
+
+
 // ===============================
 // CURRENT YEAR FOOTER
 // ===============================

@@ -1,9 +1,443 @@
-body{
-    font-family: Arial, sans-serif;
-    background:#fff7ed;
-    text-align:center;
+/* =====================
+   GLOBAL SETTINGS
+===================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-h1{
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff7ed;
+    color:#292524;
+    line-height:1.6;
+}
+
+
+a{
+    text-decoration:none;
+}
+
+
+
+/* =====================
+   NAVBAR
+===================== */
+
+header{
+    background:#431407;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+.navbar{
+
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.logo{
+
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+
+}
+
+
+.logo span{
+
+    color:#fb923c;
+
+}
+
+
+
+.nav-links{
+
+    display:flex;
+    list-style:none;
+    gap:30px;
+
+}
+
+
+.nav-links a{
+
+    color:white;
+    font-weight:bold;
+
+}
+
+
+.nav-links a:hover{
+
+    color:#fb923c;
+
+}
+
+
+
+.menu-toggle{
+
+    display:none;
+    color:white;
+    font-size:25px;
+
+}
+
+
+
+
+
+/* =====================
+   HERO
+===================== */
+
+
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    rgba(67,20,7,.7),
+    rgba(67,20,7,.7)
+    ),
+    url("../assets/images/chapati.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+}
+
+
+
+.hero-content{
+
+    max-width:700px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+
+
+.hero p{
+
+    font-size:20px;
+
+}
+
+
+
+.hero-buttons{
+
+    margin-top:30px;
+
+}
+
+
+
+.btn{
+
+    display:inline-block;
+
+    background:#ea580c;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    margin:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#c2410c;
+
+}
+
+
+
+.secondary{
+
+    background:white;
+
+    color:#431407;
+
+}
+
+
+
+
+
+
+/* =====================
+   SECTIONS
+===================== */
+
+
+section{
+
+    padding:80px 20px;
+
+}
+
+
+h2{
+
+    text-align:center;
+
+    font-size:35px;
+
+    color:#9a3412;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+.about{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* =====================
+   MENU CARDS
+===================== */
+
+
+.menu-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.card i{
+
+    font-size:40px;
+
     color:#ea580c;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.card h3{
+
+    color:#431407;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.card h4{
+
+    color:#ea580c;
+
+    font-size:22px;
+
+}
+
+
+
+
+
+
+/* =====================
+   CONTACT
+===================== */
+
+
+.contact{
+
+    text-align:center;
+
+}
+
+
+
+
+
+
+/* =====================
+   FOOTER
+===================== */
+
+
+footer{
+
+    background:#431407;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+
+
+
+
+
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+
+
+@media(max-width:768px){
+
+
+.nav-links{
+
+    display:none;
+
+    position:absolute;
+
+    top:70px;
+
+    left:0;
+
+    width:100%;
+
+    background:#431407;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+
+
+.hero h1{
+
+    font-size:35px;
+
+}
+
+
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+
 }

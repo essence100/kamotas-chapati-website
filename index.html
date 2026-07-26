@@ -2,316 +2,88 @@
 <html lang="en">
 
 <head>
-    <!-- Character Encoding -->
-    <meta charset="UTF-8">
 
-    <!-- Mobile Responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <title>Restaurant Website Concept | Kamotas Chapati</title>
+<title>Kamotas Chapati | Fresh Food Restaurant</title>
 
-    <meta name="description"
-        content="Restaurant website concept showcasing a modern restaurant experience with fresh meals, quality service and responsive design.">
+<link rel="stylesheet" href="css/style.css">
 
-    <meta name="keywords"
-        content="Restaurant, Chapati, Food, Breakfast, Dodoma, HTML, CSS, JavaScript">
-
-    <meta name="author"
-        content="Benedict E. Charles">
-
-    <!-- Theme Color -->
-    <meta name="theme-color"
-        content="#C2410C">
-
-    <!-- Google Font -->
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet"
-        href="css/style.css">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
+
 <body>
 
-<!-- ===========================
-        HEADER
-=========================== -->
 
-<header class="header">
+<!-- NAVBAR -->
 
-    <nav class="navbar container">
+<header>
 
-        <!-- Logo -->
+<nav class="navbar">
 
-        <a href="#home"
-            class="logo">
-
-            <img src="assets/images/logo.png"
-                alt="Restaurant Logo">
-
-            <div>
-
-                <h2>Kamotas</h2>
-
-                <span>Restaurant Concept</span>
-
-            </div>
-
-        </a>
+<div class="logo">
+<img src="images/logo.png" alt="Kamotas Chapati Logo">
+<h2>Kamotas Chapati</h2>
+</div>
 
 
-        <!-- Navigation -->
-
-        <ul class="nav-links">
-
-            <li><a href="#home">Home</a></li>
-
-            <li><a href="#about">About</a></li>
-
-            <li><a href="#menu">Menu</a></li>
-
-            <li><a href="#gallery">Gallery</a></li>
-
-            <li><a href="#contact">Contact</a></li>
-
-        </ul>
+<div class="menu-toggle" id="menu-toggle">
+<i class="fa-solid fa-bars"></i>
+</div>
 
 
-        <!-- CTA -->
+<ul class="nav-links" id="nav-links">
 
-        <a href="#contact"
-            class="nav-btn">
+<li><a href="#home">Home</a></li>
 
-            Order Now
+<li><a href="#about">About</a></li>
 
-        </a>
+<li><a href="#menu">Menu</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
 
 
-        <!-- Mobile Menu -->
-
-        <div class="menu-toggle">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </div>
-
-    </nav>
+</nav>
 
 </header>
 
 
 
 
-<!-- ===========================
-            HERO
-=========================== -->
+<!-- HERO SECTION -->
 
-<section id="home"
-    class="hero">
 
-    <div class="hero-overlay"></div>
+<section class="hero" id="home">
 
-    <div class="container hero-container">
 
-        <!-- Left -->
+<div class="hero-content">
 
-        <div class="hero-content">
 
-            <span class="hero-tag">
+<h1>
+Fresh Chapati Made With Love
+</h1>
 
-                Fresh • Delicious • Affordable
 
-            </span>
+<p>
+Welcome to Kamotas Chapati. Enjoy delicious, fresh and affordable meals prepared with quality ingredients.
+</p>
 
-            <h1>
 
-                Fresh Chapati.
-                <br>
+<a href="#contact" class="btn">
+Order Now
+</a>
 
-                Fresh Experience.
 
-            </h1>
+</div>
 
-            <p>
-
-                This restaurant website concept demonstrates
-                a modern food business with a clean interface,
-                responsive design and smooth user experience.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a href="#menu"
-                    class="btn">
-
-                    View Menu
-
-                </a>
-
-                <a href="#contact"
-                    class="btn btn-outline">
-
-                    Contact Us
-
-                </a>
-
-            </div>
-
-
-            <div class="hero-info">
-
-                <div>
-
-                    <h3>Fresh Meals</h3>
-
-                    <p>Prepared Daily</p>
-
-                </div>
-
-                <div>
-
-                    <h3>Fast Service</h3>
-
-                    <p>Customer First</p>
-
-                </div>
-
-                <div>
-
-                    <h3>Quality</h3>
-
-                    <p>Clean & Delicious</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- Right -->
-
-        <div class="hero-image">
-
-            <img src="assets/images/chapati.jpg"
-                alt="Fresh Chapati">
-
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- ===========================
-        ABOUT SECTION
-=========================== -->
-
-<section id="about" class="about section">
-
-    <div class="container about-container">
-
-        <div class="about-image">
-
-            <img src="assets/images/restaurant.jpg"
-                alt="Restaurant Interior">
-
-        </div>
-
-        <div class="about-content">
-
-            <span class="section-tag">
-
-                ABOUT US
-
-            </span>
-
-            <h2>
-
-                A Modern Restaurant
-                Experience
-
-            </h2>
-
-            <p>
-
-                This website demonstrates how a modern restaurant
-                can present its menu, services and customer
-                experience through a clean and responsive website.
-
-            </p>
-
-            <p>
-
-                The layout is designed to be fast, mobile-friendly
-                and easy for customers to navigate.
-
-            </p>
-
-            <div class="about-cards">
-
-                <div class="about-card">
-
-                    <i class="fa-solid fa-utensils"></i>
-
-                    <div>
-
-                        <h4>Fresh Meals</h4>
-
-                        <p>Prepared Daily</p>
-
-                    </div>
-
-                </div>
-
-                <div class="about-card">
-
-                    <i class="fa-solid fa-award"></i>
-
-                    <div>
-
-                        <h4>Quality Service</h4>
-
-                        <p>Customer Satisfaction</p>
-
-                    </div>
-
-                </div>
-
-                <div class="about-card">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <div>
-
-                        <h4>Convenient Location</h4>
-
-                        <p>Easy to Find</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </section>
 
@@ -319,107 +91,60 @@
 
 
 
-<!-- ===========================
-        FEATURES
-=========================== -->
 
-<section class="features section">
 
-    <div class="container">
+<!-- ABOUT SECTION -->
 
-        <div class="section-title">
 
-            <span class="section-tag">
+<section class="about" id="about">
 
-                WHY CHOOSE US
 
-            </span>
+<div class="section-title">
 
-            <h2>
+<h2>About Us</h2>
 
-                Quality Is Our Priority
+<p>
+Taste the difference with Kamotas Chapati
+</p>
 
-            </h2>
+</div>
 
-        </div>
 
-        <div class="features-grid">
 
-            <div class="feature-card">
+<div class="about-container">
 
-                <i class="fa-solid fa-bowl-food"></i>
 
-                <h3>
+<div class="about-image">
 
-                    Fresh Food
+<img src="images/restaurant.jpg" alt="Kamotas Restaurant">
 
-                </h3>
+</div>
 
-                <p>
 
-                    Carefully prepared meals using fresh ingredients.
 
-                </p>
+<div class="about-text">
 
-            </div>
+<h3>
+Quality Food, Happy Customers
+</h3>
 
-            <div class="feature-card">
 
-                <i class="fa-solid fa-truck-fast"></i>
+<p>
+Kamotas Chapati is a modern food restaurant specializing in fresh chapati and delicious meals. 
+Our goal is to provide tasty food with excellent customer service.
+</p>
 
-                <h3>
 
-                    Fast Service
+<p>
+We prepare every meal carefully to ensure freshness, quality and great taste.
+</p>
 
-                </h3>
 
-                <p>
+</div>
 
-                    Quick service designed to save customers time.
 
-                </p>
+</div>
 
-            </div>
-
-            <div class="feature-card">
-
-                <i class="fa-solid fa-star"></i>
-
-                <h3>
-
-                    Great Quality
-
-                </h3>
-
-                <p>
-
-                    Clean environment and quality customer care.
-
-                </p>
-
-            </div>
-
-            <div class="feature-card">
-
-                <i class="fa-solid fa-heart"></i>
-
-                <h3>
-
-                    Friendly Staff
-
-                </h3>
-
-                <p>
-
-                    Welcoming service that keeps customers coming back.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </section>
 
@@ -427,606 +152,315 @@
 
 
 
-<!-- ===========================
-        POPULAR MENU
-=========================== -->
 
-<section id="menu" class="menu section">
 
-    <div class="container">
 
-        <div class="section-title">
+<!-- MENU SECTION -->
 
-            <span class="section-tag">
 
-                OUR MENU
+<section class="menu" id="menu">
 
-            </span>
 
-            <h2>
+<div class="section-title">
 
-                Popular Meals
+<h2>Our Menu</h2>
 
-            </h2>
+<p>
+Choose your favourite meal
+</p>
 
-        </div>
+</div>
 
-        <div class="menu-grid">
 
-            <article class="menu-card">
 
-                <img src="assets/images/chapati.jpg"
-                    alt="Chapati">
 
-                <div class="menu-content">
+<div class="cards">
 
-                    <h3>
 
-                        Plain Chapati
 
-                    </h3>
+<div class="card">
 
-                    <p>
 
-                        Freshly prepared every day.
+<img src="images/chapati.jpg" alt="Chapati">
 
-                    </p>
 
-                    <div class="menu-bottom">
+<h3>Fresh Chapati</h3>
 
-                        <span class="price">
 
-                            TSh 500
+<p>
+Soft and delicious chapati prepared daily.
+</p>
 
-                        </span>
 
-                        <a href="#contact">
+<h4>Available Now</h4>
 
-                            Order
 
-                        </a>
+</div>
 
-                    </div>
 
-                </div>
 
-            </article>
 
 
 
+<div class="card">
 
 
-            <article class="menu-card">
+<img src="images/food.jpg" alt="Food">
 
-                <img src="assets/images/food1.jpg"
-                    alt="Breakfast">
 
-                <div class="menu-content">
+<h3>Special Meals</h3>
 
-                    <h3>
 
-                        Chapati & Eggs
+<p>
+Enjoy our tasty meals prepared with fresh ingredients.
+</p>
 
-                    </h3>
 
-                    <p>
+<h4>Customer Favourite</h4>
 
-                        A delicious breakfast combination.
 
-                    </p>
+</div>
 
-                    <div class="menu-bottom">
 
-                        <span class="price">
 
-                            TSh 2,000
 
-                        </span>
 
-                        <a href="#contact">
 
-                            Order
 
-                        </a>
+<div class="card">
 
-                    </div>
 
-                </div>
+<img src="images/food.jpg" alt="Restaurant Food">
 
-            </article>
 
+<h3>Family Packages</h3>
 
 
+<p>
+Affordable food packages for friends and families.
+</p>
 
 
-            <article class="menu-card">
+<h4>Order Today</h4>
 
-                <img src="assets/images/food2.jpg"
-                    alt="Lunch">
 
-                <div class="menu-content">
+</div>
 
-                    <h3>
 
-                        Special Meal
 
-                    </h3>
+</div>
 
-                    <p>
-
-                        A satisfying meal served fresh.
-
-                    </p>
-
-                    <div class="menu-bottom">
-
-                        <span class="price">
-
-                            TSh 5,000
-
-                        </span>
-
-                        <a href="#contact">
-
-                            Order
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-
-
-            <article class="menu-card">
-
-                <img src="assets/images/food3.jpg"
-                    alt="Restaurant Meal">
-
-                <div class="menu-content">
-
-                    <h3>
-
-                        Family Combo
-
-                    </h3>
-
-                    <p>
-
-                        Perfect for sharing with family or friends.
-
-                    </p>
-
-                    <div class="menu-bottom">
-
-                        <span class="price">
-
-                            TSh 12,000
-
-                        </span>
-
-                        <a href="#contact">
-
-                            Order
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- ===========================
-        GALLERY
-=========================== -->
-
-<section id="gallery" class="gallery section">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span class="section-tag">GALLERY</span>
-
-            <h2>Our Food Moments</h2>
-
-        </div>
-
-        <div class="gallery-grid">
-
-            <img src="assets/images/food1.jpg" alt="Food Image 1">
-
-            <img src="assets/images/food2.jpg" alt="Food Image 2">
-
-            <img src="assets/images/restaurant.jpg" alt="Restaurant">
-
-            <img src="assets/images/food3.jpg" alt="Food Image 3">
-
-            <img src="assets/images/chapati.jpg" alt="Chapati">
-
-            <img src="assets/images/food4.jpg" alt="Restaurant Meal">
-
-        </div>
-
-    </div>
 
 </section>
 
 
 
-<!-- ===========================
-        TESTIMONIALS
-=========================== -->
 
-<section class="testimonials section">
 
-    <div class="container">
 
-        <div class="section-title">
 
-            <span class="section-tag">
 
-                TESTIMONIALS
 
-            </span>
+<!-- GALLERY SECTION -->
 
-            <h2>
 
-                Customer Experience
+<section class="gallery" id="gallery">
 
-            </h2>
 
-        </div>
+<div class="section-title">
 
-        <div class="testimonial-grid">
+<h2>Food Gallery</h2>
 
-            <div class="testimonial-card">
+<p>
+See what we prepare
+</p>
 
-                <i class="fa-solid fa-quote-left"></i>
+</div>
 
-                <p>
 
-                    "Modern restaurant websites help customers
-                    quickly find menus, contact information and
-                    location."
 
-                </p>
+<div class="gallery-container">
 
-                <h4>Restaurant Website Demo</h4>
 
-            </div>
+<img src="images/chapati.jpg" alt="Chapati">
 
-            <div class="testimonial-card">
+<img src="images/food.jpg" alt="Food">
 
-                <i class="fa-solid fa-quote-left"></i>
+<img src="images/restaurant.jpg" alt="Restaurant">
 
-                <p>
 
-                    "A clean interface creates a professional
-                    impression for any food business."
+</div>
 
-                </p>
 
-                <h4>Portfolio Concept</h4>
-
-            </div>
-
-            <div class="testimonial-card">
-
-                <i class="fa-solid fa-quote-left"></i>
-
-                <p>
-
-                    "Easy navigation improves customer experience
-                    on both mobile and desktop."
-
-                </p>
-
-                <h4>Responsive Design</h4>
-
-            </div>
-
-        </div>
-
-    </div>
 
 </section>
 
 
 
-<!-- ===========================
-        STATS
-=========================== -->
 
-<section class="stats">
 
-    <div class="container stats-grid">
 
-        <div>
 
-            <h2>100%</h2>
 
-            <p>Responsive</p>
 
-        </div>
+<!-- WHY CHOOSE US -->
 
-        <div>
 
-            <h2>24/7</h2>
+<section class="features">
 
-            <p>Online Presence</p>
 
-        </div>
+<div class="section-title">
 
-        <div>
+<h2>Why Choose Us?</h2>
 
-            <h2>Modern</h2>
+</div>
 
-            <p>Restaurant Design</p>
 
-        </div>
 
-        <div>
+<div class="feature-box">
 
-            <h2>Fast</h2>
 
-            <p>User Experience</p>
+<div>
 
-        </div>
+<i class="fa-solid fa-utensils"></i>
 
-    </div>
+<h3>Fresh Food</h3>
+
+<p>
+Prepared fresh every day.
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<i class="fa-solid fa-star"></i>
+
+<h3>Quality Taste</h3>
+
+<p>
+Great taste you will love.
+</p>
+
+</div>
+
+
+
+
+
+<div>
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Fast Service</h3>
+
+<p>
+Quick and reliable service.
+</p>
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- ===========================
-        CONTACT
-=========================== -->
 
-<section id="contact" class="contact section">
 
-    <div class="container contact-container">
 
-        <div class="contact-info">
 
-            <span class="section-tag">
 
-                CONTACT
 
-            </span>
+<!-- CONTACT SECTION -->
 
-            <h2>
 
-                Let's Connect
+<section class="contact" id="contact">
 
-            </h2>
 
-            <p>
+<div class="section-title">
 
-                This section can later be updated with the
-                restaurant's official phone number,
-                WhatsApp, email and physical address.
+<h2>Contact Us</h2>
 
-            </p>
+<p>
+Order your favourite meals today
+</p>
 
-            <div class="contact-item">
+</div>
 
-                <i class="fa-solid fa-location-dot"></i>
 
-                <span>Dodoma, Tanzania</span>
 
-            </div>
+<div class="contact-links">
 
-            <div class="contact-item">
 
-                <i class="fa-solid fa-phone"></i>
+<a href="https://wa.me/255782722871">
 
-                <span>+255 XXX XXX XXX</span>
+<i class="fa-brands fa-whatsapp"></i>
 
-            </div>
-
-            <div class="contact-item">
-
-                <i class="fa-solid fa-envelope"></i>
-
-                <span>info@example.com</span>
-
-            </div>
-
-            <div class="social-links">
-
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-
-                <a href="#"><i class="fab fa-instagram"></i></a>
-
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-
-            </div>
-
-        </div>
-
-
-
-        <form class="contact-form">
-
-            <input
-                type="text"
-                placeholder="Your Name"
-                required>
-
-            <input
-                type="email"
-                placeholder="Email Address"
-                required>
-
-            <input
-                type="text"
-                placeholder="Subject">
-
-            <textarea
-                rows="6"
-                placeholder="Write your message..."></textarea>
-
-            <button
-                type="submit"
-                class="btn">
-
-                Send Message
-
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-
-
-<!-- ===========================
-        MAP
-=========================== -->
-
-<section class="map">
-
-    <iframe
-        src="https://www.google.com/maps?q=Dodoma,Tanzania&output=embed"
-        loading="lazy"
-        allowfullscreen>
-    </iframe>
-
-</section>
-
-
-
-<!-- ===========================
-        FOOTER
-=========================== -->
-
-<footer>
-
-    <div class="container footer-container">
-
-        <div class="footer-logo">
-
-            <img
-                src="assets/images/logo.png"
-                alt="Logo">
-
-            <h3>
-
-                Kamotas
-
-            </h3>
-
-            <p>
-
-                Restaurant Website Concept
-
-            </p>
-
-        </div>
-
-        <div>
-
-            <h4>
-
-                Quick Links
-
-            </h4>
-
-            <ul>
-
-                <li><a href="#home">Home</a></li>
-
-                <li><a href="#about">About</a></li>
-
-                <li><a href="#menu">Menu</a></li>
-
-                <li><a href="#gallery">Gallery</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-        </div>
-
-        <div>
-
-            <h4>
-
-                Opening Hours
-
-            </h4>
-
-            <p>
-
-                Monday - Sunday
-
-            </p>
-
-            <p>
-
-                Opening hours to be confirmed.
-
-            </p>
-
-        </div>
-
-    </div>
-
-    <div class="copyright">
-
-        <p>
-
-            © 2026 Restaurant Website Concept.
-            Designed by <strong>Benedict E. Charles</strong>
-
-        </p>
-
-    </div>
-
-</footer>
-
-
-
-<!-- Floating WhatsApp -->
-
-<a href="#"
-    class="whatsapp">
-
-    <i class="fab fa-whatsapp"></i>
+WhatsApp
 
 </a>
 
 
 
-<!-- Back To Top -->
 
-<button
-    class="top-btn">
+<a href="mailto:info@kamotaschapati.com">
 
-    <i class="fa-solid fa-arrow-up"></i>
+<i class="fa-solid fa-envelope"></i>
 
-</button>
+Email
+
+</a>
+
+
+
+
+<a href="#">
+
+<i class="fa-brands fa-instagram"></i>
+
+Instagram
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<p>
+© 2026 Kamotas Chapati | All Rights Reserved
+</p>
+
+
+</footer>
+
+
+
 
 
 
 <script src="js/script.js"></script>
+
 
 </body>
 

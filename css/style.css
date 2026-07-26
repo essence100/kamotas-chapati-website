@@ -143,6 +143,7 @@ header{
 .hero{
 
     min-height:100vh;
+
     background:
 
     linear-gradient(
@@ -150,7 +151,7 @@ header{
     rgba(0,0,0,.6)
     ),
 
-    url("../images/restaurant.jpg");
+    url("../assets/images/restaurant.jpg");
 
     background-size:cover;
     background-position:center;
@@ -211,7 +212,6 @@ header{
     background:white;
 
 }
-
 
 
 
@@ -377,7 +377,6 @@ section{
 
 
 
-
 /* ==========================
    GALLERY
 ========================== */
@@ -462,6 +461,7 @@ section{
 
 
 
+
 /* ==========================
    CONTACT
 ========================== */
@@ -512,6 +512,7 @@ section{
     margin-right:8px;
 
 }
+
 
 
 

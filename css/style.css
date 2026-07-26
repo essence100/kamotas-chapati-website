@@ -432,25 +432,180 @@ section{
 
 
 /* ==========================
-   ABOUT
+   ABOUT SECTION
 ========================== */
 
 
 .about-container{
 
     display:grid;
+
     grid-template-columns:1fr 1fr;
-    gap:40px;
+
+    gap:50px;
+
     align-items:center;
 
 }
 
 
 
+
+
 .about-image img{
 
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.2);
+
+
+}
+
+
+
+
+
+.about-text h3{
+
+
+    color:#8b4513;
+
+
+    font-size:30px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.about-text p{
+
+
+    margin-bottom:18px;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+
+
+
+
+.about-details{
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+
+
+.about-details div{
+
+
+    margin:15px 0;
+
+
+    font-weight:bold;
+
+
+    color:#555;
+
+
+}
+
+
+
+
+
+.about-details i{
+
+
+    color:#e67e22;
+
+
+    margin-right:10px;
+
+
+}
+
+
+
+
+
+.about-btn{
+
+
+    display:inline-block;
+
+
+    margin-top:20px;
+
+
+    background:#8b4513;
+
+
+    color:white;
+
+
+    padding:13px 30px;
+
+
+    border-radius:30px;
+
+
+    font-weight:bold;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.about-btn:hover{
+
+
+    background:#ffd700;
+
+
+    color:#8b4513;
+
+
+}
+
+
+
+
+
+
+@media(max-width:768px){
+
+
+.about-container{
+
+
+    grid-template-columns:1fr;
+
 
 }
 
@@ -458,8 +613,12 @@ section{
 
 .about-text h3{
 
-    color:#8b4513;
-    margin-bottom:15px;
+
+    font-size:25px;
+
+
+}
+
 
 }
 

@@ -135,84 +135,87 @@ header{
 
 
 
-/* ==========================
-   HERO
-========================== */
+/* HERO TAG */
 
+.hero-tag{
 
-.hero{
+    display:inline-block;
 
-    min-height:100vh;
+    background:#ffd700;
 
-    background:
+    color:#8b4513;
 
-    linear-gradient(
-    rgba(0,0,0,.6),
-    rgba(0,0,0,.6)
-    ),
+    padding:8px 20px;
 
-    url("../assets/images/restaurant.jpg");
+    border-radius:30px;
 
-    background-size:cover;
-    background-position:center;
+    font-weight:bold;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-
-    color:white;
-
-}
-
-
-
-.hero-content{
-
-    max-width:700px;
-    padding:20px;
-
-}
-
-
-
-.hero h1{
-
-    font-size:50px;
     margin-bottom:20px;
 
 }
 
 
-.hero p{
-
-    font-size:20px;
-    margin-bottom:30px;
-
-}
 
 
+.hero-buttons{
 
-.btn{
+    display:flex;
 
-    display:inline-block;
-    background:#ffd700;
-    color:#8b4513;
-    padding:14px 35px;
-    border-radius:30px;
-    font-weight:bold;
-    transition:.3s;
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
 
 }
 
 
-.btn:hover{
 
-    transform:translateY(-5px);
+.secondary-btn{
+
     background:white;
 
 }
 
+
+
+
+.hero-info{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.hero-info div{
+
+    background:rgba(255,255,255,.15);
+
+    padding:12px 20px;
+
+    border-radius:30px;
+
+}
+
+
+
+.hero-info i{
+
+    color:#ffd700;
+
+    margin-right:8px;
+
+}
 
 
 

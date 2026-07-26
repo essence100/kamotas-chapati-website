@@ -136,13 +136,14 @@ header{
 
 
 /* ==========================
-   HERO
+   HERO SECTION
 ========================== */
 
 
 .hero{
 
     min-height:100vh;
+
 
     background:
 
@@ -153,58 +154,44 @@ header{
 
     url("../assets/images/restaurant.jpg");
 
+
     background-size:cover;
+
     background-position:center;
 
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
 
     text-align:center;
 
+
     color:white;
 
-    padding-top:80px;
+
+    padding:80px 8% 0;
+
 
 }
-
 
 
 
 
 .hero-content{
 
-    max-width:850px;
+
+    max-width:800px;
+
 
     padding:30px;
 
-    animation:heroFade 1.2s ease;
 
-}
+    animation:heroAnimation 1.2s ease;
 
-
-
-
-
-/* HERO SMALL TAG */
-
-.hero-tag{
-
-    display:inline-block;
-
-    background:#ffd700;
-
-    color:#8b4513;
-
-    padding:8px 22px;
-
-    border-radius:50px;
-
-    font-weight:bold;
-
-    margin-bottom:25px;
-
-    font-size:15px;
 
 }
 
@@ -215,13 +202,27 @@ header{
 .hero h1{
 
 
-    font-size:55px;
+    font-size:60px;
 
-    line-height:1.2;
 
-    margin-bottom:20px;
+    font-weight:800;
+
+
+    line-height:1.15;
+
+
+    margin-bottom:25px;
+
+
+    letter-spacing:.5px;
+
 
     text-transform:capitalize;
+
+
+    text-shadow:
+
+    0 5px 20px rgba(0,0,0,.5);
 
 
 }
@@ -235,35 +236,19 @@ header{
 
     font-size:21px;
 
-    max-width:700px;
 
-    margin:0 auto 35px;
+    line-height:1.8;
+
 
     color:#f5f5f5;
 
 
-}
-
-
-
-
-
-/* HERO BUTTONS */
-
-
-.hero-buttons{
-
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
+    margin-bottom:35px;
 
 
 }
+
+
 
 
 
@@ -274,31 +259,43 @@ header{
 
     display:inline-flex;
 
+
     align-items:center;
 
+
     justify-content:center;
+
 
     gap:10px;
 
 
+
     background:#ffd700;
+
 
     color:#8b4513;
 
 
-    padding:15px 35px;
+
+    padding:16px 45px;
 
 
     border-radius:50px;
 
 
+    font-size:17px;
+
+
     font-weight:bold;
 
 
-    transition:.3s;
+
+    transition:.35s;
 
 
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.3);
 
 
 }
@@ -310,24 +307,11 @@ header{
 .btn:hover{
 
 
-    transform:translateY(-6px);
-
-    background:white;
-
-
-}
-
-
-
-
-
-/* SECOND BUTTON */
-
-
-.secondary-btn{
+    transform:translateY(-7px);
 
 
     background:white;
+
 
     color:#8b4513;
 
@@ -338,108 +322,40 @@ header{
 
 
 
-.secondary-btn:hover{
 
 
-    background:#ffd700;
+/* HERO ENTRY ANIMATION */
 
 
-}
-
-
-
-
-
-
-/* HERO INFORMATION */
-
-
-.hero-info{
-
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    margin-top:40px;
-
-    flex-wrap:wrap;
-
-
-}
-
-
-
-
-
-.hero-info div{
-
-
-    background:rgba(255,255,255,.15);
-
-
-    backdrop-filter:blur(8px);
-
-
-    padding:12px 25px;
-
-
-    border-radius:50px;
-
-
-    font-weight:bold;
-
-
-}
-
-
-
-
-
-.hero-info i{
-
-
-    color:#ffd700;
-
-    margin-right:8px;
-
-
-}
-
-
-
-
-
-
-
-/* HERO ANIMATION */
-
-
-@keyframes heroFade{
+@keyframes heroAnimation{
 
 
     from{
 
+
         opacity:0;
 
-        transform:translateY(40px);
+
+        transform:translateY(50px);
+
 
     }
 
 
+
     to{
+
 
         opacity:1;
 
+
         transform:translateY(0);
+
 
     }
 
 
 }
-
 
 
 
@@ -454,10 +370,20 @@ header{
 
 
 
+.hero{
+
+
+    padding-top:100px;
+
+
+}
+
+
+
 .hero h1{
 
 
-    font-size:36px;
+    font-size:38px;
 
 
 }
@@ -477,40 +403,23 @@ header{
 .hero-content{
 
 
-    padding:20px;
+    padding:15px;
 
 
 }
 
 
 
-.hero-info{
+.btn{
 
 
-    flex-direction:column;
-
-    align-items:center;
-
-
-}
-
-
-
-.hero-info div{
-
-
-    width:100%;
+    padding:14px 35px;
 
 
 }
 
 
-
 }
-
-
-
-
 
 
 /* ==========================

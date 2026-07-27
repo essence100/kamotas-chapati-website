@@ -127,24 +127,16 @@ function sendOrder(event){
 // GENERATE TICKET IMAGE
 // ===============================
 
-
 function generateTicketImage(){
-
 
 
     if(!currentOrder){
 
-
         alert("Please place your order first");
-
 
         return;
 
-
     }
-
-
-
 
 
 
@@ -152,46 +144,68 @@ function generateTicketImage(){
 
 
 
+    if(!ticket){
+
+        alert("Ticket not found");
+
+        return;
+
+    }
+
+
 
 
     html2canvas(ticket, {
 
-
-        scale:3,
-
-
-        backgroundColor:"#ffffff"
-
+        scale:3
 
     })
-
-
 
     .then(canvas => {
 
 
 
-        canvas.toBlob(blob => {
+        const image = canvas.toDataURL("image/png");
 
 
 
-            const file = new File(
+        const link = document.createElement("a");
 
-                [blob],
 
-                "Kamotas-Order-Ticket.png",
+        link.href = image;
 
-                {
 
-                    type:"image/png"
+        link.download = "Kamotas-Order-Ticket.png";
 
-                }
 
-            );
+        link.click();
 
 
 
 
+
+        alert(
+        "Ticket created successfully. Now share the image on WhatsApp."
+        );
+
+
+
+    })
+
+    .catch(error => {
+
+
+        console.log(error);
+
+
+        alert("Failed to create ticket image");
+
+
+    });
+
+
+
+}
 
 
             // MOBILE SHARE

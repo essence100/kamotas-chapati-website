@@ -31,10 +31,12 @@ function sendOrder(event){
 
 
 
+
     // CREATE ORDER NUMBER
 
     const orderNumber = 
     "KMT-" + Math.floor(10000 + Math.random() * 90000);
+
 
 
 
@@ -52,6 +54,7 @@ function sendOrder(event){
         message
 
     };
+
 
 
 
@@ -88,6 +91,7 @@ function sendOrder(event){
 
 
 
+
     // SHOW TICKET
 
 
@@ -101,13 +105,16 @@ function sendOrder(event){
 
 
 
-    // MOVE TO TICKET
+
+    // SCROLL TO TICKET
+
 
     ticket.scrollIntoView({
 
         behavior:"smooth"
 
     });
+
 
 
 
@@ -121,31 +128,18 @@ function sendOrder(event){
 
 
 
+
+
 // ===============================
-// GENERATE TICKET IMAGE
+// DOWNLOAD TICKET IMAGE
 // ===============================
 
 
-function generateTicketImage(){
-
-
-    if(!currentOrder){
-
-
-        alert("Please place your order first");
-
-
-        return;
-
-
-    }
-
-
+function downloadTicketImage(){
 
 
 
     const ticket = document.querySelector(".ticket");
-
 
 
 
@@ -165,7 +159,6 @@ function generateTicketImage(){
 
 
 
-
     html2canvas(ticket, {
 
 
@@ -178,120 +171,25 @@ function generateTicketImage(){
 
 
 
-    .then(canvas => {
+    .then(canvas=>{
 
 
 
-        canvas.toBlob(async function(blob){
+        const link = document.createElement("a");
 
 
 
-            const file = new File(
+        link.download =
+        "Kamotas-Order-Ticket.png";
 
-                [blob],
 
-                "Kamotas-Order-Ticket.png",
 
-                {
+        link.href =
+        canvas.toDataURL("image/png");
 
-                    type:"image/png"
 
-                }
 
-            );
-
-
-
-
-
-
-            // SHARE DIRECTLY ON MOBILE
-
-
-            if(
-                navigator.share &&
-                navigator.canShare &&
-                navigator.canShare({
-
-                    files:[file]
-
-                })
-
-            ){
-
-
-
-                navigator.share({
-
-                    title:
-                    "Kamotas Chapati Order",
-
-
-                    text:
-                    "Kamotas Chapati Order Ticket",
-
-
-                    files:[file]
-
-
-                })
-
-                .catch(error=>{
-
-
-                    console.log(error);
-
-
-                });
-
-
-
-
-            }
-
-
-
-
-
-
-            // DESKTOP FALLBACK
-
-
-            else{
-
-
-
-                const link = document.createElement("a");
-
-
-
-                link.download =
-                "Kamotas-Order-Ticket.png";
-
-
-
-                link.href =
-                canvas.toDataURL("image/png");
-
-
-
-                link.click();
-
-
-
-
-                alert(
-                "Ticket image created. Share it on WhatsApp."
-                );
-
-
-
-            }
-
-
-
-
-        });
+        link.click();
 
 
 
@@ -305,12 +203,118 @@ function generateTicketImage(){
         console.log(error);
 
 
-        alert(
-        "Failed to create ticket image"
-        );
+        alert("Failed to download ticket");
 
 
     });
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// ===============================
+// SEND ORDER TO WHATSAPP
+// ===============================
+
+
+function sendTicketWhatsApp(){
+
+
+
+    if(!currentOrder){
+
+
+        alert("Please place your order first");
+
+
+        return;
+
+
+    }
+
+
+
+
+
+
+    const whatsappNumber = "255782722871";
+
+
+
+
+
+
+    const orderMessage =
+
+`🍽️ *KAMOTAS CHAPATI ORDER*
+
+🆔 Order ID:
+${currentOrder.orderNumber}
+
+
+👤 Customer:
+${currentOrder.name}
+
+
+📞 Phone:
+${currentOrder.phone}
+
+
+🍴 Meal:
+${currentOrder.food}
+
+
+🔢 Quantity:
+${currentOrder.quantity}
+
+
+📍 Location:
+${currentOrder.location}
+
+
+📝 Message:
+${currentOrder.message}
+
+
+❤️ Thank you for choosing Kamotas Chapati`;
+
+
+
+
+
+
+
+    const whatsappURL =
+
+    "https://wa.me/" +
+
+    whatsappNumber +
+
+    "?text=" +
+
+    encodeURIComponent(orderMessage);
+
+
+
+
+
+
+
+    window.open(
+
+        whatsappURL,
+
+        "_blank"
+
+    );
 
 
 

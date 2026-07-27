@@ -102,54 +102,155 @@ function sendOrder(event){
     event.preventDefault();
 
 
+    // GET FORM DATA
+
     const name = document.getElementById("name").value;
+
     const phone = document.getElementById("phone").value;
+
     const food = document.getElementById("food").value;
+
     const quantity = document.getElementById("quantity").value;
+
     const location = document.getElementById("location").value;
+
     const message = document.getElementById("message").value;
+
+
+
+
+    // CREATE ORDER NUMBER
+
+    const orderNumber = 
+    "KMT-" + Math.floor(10000 + Math.random() * 90000);
+
+
+
+
+
+    // SHOW TICKET DATA
+
+
+    document.getElementById("orderId").innerHTML = orderNumber;
+
+
+    document.getElementById("ticketName").innerHTML = name;
+
+
+    document.getElementById("ticketPhone").innerHTML = phone;
+
+
+    document.getElementById("ticketFood").innerHTML = food;
+
+
+    document.getElementById("ticketQuantity").innerHTML = quantity;
+
+
+    document.getElementById("ticketLocation").innerHTML = location;
+
+
+    document.getElementById("ticketMessage").innerHTML = message;
+
+
+
+
+
+    // SHOW TICKET SECTION
+
+    document.getElementById("ticket").style.display = "block";
+
+
+
+    // SCROLL TO TICKET
+
+    document.getElementById("ticket")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+
+
+    // SAVE ORDER TEMPORARILY
+
+    localStorage.setItem(
+        "kamotasOrder",
+        JSON.stringify({
+
+            orderNumber,
+            name,
+            phone,
+            food,
+            quantity,
+            location,
+            message
+
+        })
+    );
+
+
+}
+
+
+
+
+
+
+
+// SEND TICKET TO WHATSAPP
+
+
+function sendTicketWhatsApp(){
+
+
+    const order = JSON.parse(
+        localStorage.getItem("kamotasOrder")
+    );
 
 
 
     const whatsappNumber = "255782722871";
 
 
-    const orderMessage = 
-`🍽️ *KAMOTAS CHAPATI ORDER*
 
-👤 *Customer:*
-${name}
+    const text = 
+`🍽️ KAMOTAS CHAPATI ORDER
 
-📞 *Phone:*
-${phone}
+🆔 Order ID:
+${order.orderNumber}
 
-🍴 *Meal:*
-${food}
+👤 Customer:
+${order.name}
 
-🔢 *Quantity:*
-${quantity}
+📞 Phone:
+${order.phone}
 
-📍 *Location:*
-${location}
+🍴 Meal:
+${order.food}
 
-📝 *Additional Message:*
-${message}
+🔢 Quantity:
+${order.quantity}
+
+📍 Location:
+${order.location}
+
+📝 Message:
+${order.message}
 
 
 ❤️ Thank you for choosing Kamotas Chapati`;
 
 
 
-    const whatsappURL = 
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(orderMessage)}`;
+
+    const url = 
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 
 
 
-    window.open(whatsappURL, "_blank");
+    window.open(url,"_blank");
 
 
 }
-
 
 
 

@@ -7,6 +7,7 @@ let currentOrder = null;
 
 
 
+
 function sendOrder(event){
 
     event.preventDefault();
@@ -29,8 +30,12 @@ function sendOrder(event){
 
 
 
+
+    // CREATE ORDER NUMBER
+
     const orderNumber = 
     "KMT-" + Math.floor(10000 + Math.random() * 90000);
+
 
 
 
@@ -54,22 +59,30 @@ function sendOrder(event){
 
 
 
-    // DISPLAY TICKET
+    // DISPLAY TICKET DATA
 
 
     document.getElementById("orderId").innerText = orderNumber;
 
+
     document.getElementById("ticketName").innerText = name;
+
 
     document.getElementById("ticketPhone").innerText = phone;
 
+
     document.getElementById("ticketFood").innerText = food;
+
 
     document.getElementById("ticketQuantity").innerText = quantity;
 
+
     document.getElementById("ticketLocation").innerText = location;
 
+
     document.getElementById("ticketMessage").innerText = message;
+
+
 
 
 
@@ -87,13 +100,15 @@ function sendOrder(event){
 
 
 
+
+    // SCROLL TO TICKET
+
+
     ticket.scrollIntoView({
 
         behavior:"smooth"
 
     });
-
-
 
 
 
@@ -107,77 +122,148 @@ function sendOrder(event){
 
 
 
+
 // ===============================
-// SEND ORDER TO WHATSAPP
+// GENERATE TICKET IMAGE
 // ===============================
 
 
-function sendTicketWhatsApp(){
+function generateTicketImage(){
+
 
 
     if(!currentOrder){
 
+
         alert("Please place your order first");
 
+
         return;
+
 
     }
 
 
 
 
-    const whatsappNumber = "255782722871";
 
 
-
-
-    const message =
-
-`🍽️ *KAMOTAS CHAPATI ORDER*
-
-🆔 Order ID:
-${currentOrder.orderNumber}
-
-
-👤 Customer:
-${currentOrder.name}
-
-
-📞 Phone:
-${currentOrder.phone}
-
-
-🍴 Meal:
-${currentOrder.food}
-
-
-🔢 Quantity:
-${currentOrder.quantity}
-
-
-📍 Location:
-${currentOrder.location}
-
-
-📝 Message:
-${currentOrder.message}
-
-
-❤️ Thank you for choosing Kamotas Chapati`;
+    const ticket = document.querySelector(".ticket");
 
 
 
 
 
-
-    const whatsappURL =
-
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    html2canvas(ticket, {
 
 
+        scale:3,
 
 
-    window.open(whatsappURL,"_blank");
+        backgroundColor:"#ffffff"
+
+
+    })
+
+
+
+    .then(canvas => {
+
+
+
+        canvas.toBlob(blob => {
+
+
+
+            const file = new File(
+
+                [blob],
+
+                "Kamotas-Order-Ticket.png",
+
+                {
+
+                    type:"image/png"
+
+                }
+
+            );
+
+
+
+
+
+
+            // MOBILE SHARE
+
+            if(navigator.share){
+
+
+
+                navigator.share({
+
+
+                    title:"Kamotas Chapati Order",
+
+
+                    text:"Kamotas Chapati Order Ticket",
+
+
+                    files:[file]
+
+
+                })
+
+                .catch(error => {
+
+                    console.log(error);
+
+                });
+
+
+
+
+
+            }
+
+
+
+            else{
+
+
+                // DESKTOP FALLBACK
+
+
+                const link = document.createElement("a");
+
+
+                link.download = "Kamotas-Order-Ticket.png";
+
+
+                link.href = canvas.toDataURL();
+
+
+                link.click();
+
+
+
+                alert(
+                "Ticket image created. Share it on WhatsApp."
+                );
+
+
+            }
+
+
+
+
+
+        });
+
+
+
+    });
+
 
 
 }

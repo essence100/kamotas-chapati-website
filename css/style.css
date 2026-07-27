@@ -1217,21 +1217,21 @@ footer{
 
 
 
-
+/* ==========================
+   ORDER TICKET SECTION
+========================== */
 
 .ticket-section{
+
     display:none;
     padding:50px 8%;
+    opacity:1 !important;
+    transform:none !important;
+
 }
 
 
 
-
-
-
-/* ==========================
-   TICKET DESIGN
-========================== */
 
 .ticket{
 
@@ -1244,83 +1244,25 @@ footer{
     text-align:center;
     color:#333;
 
-}
-
-
-
-.ticket-logo{
-
-    width:80px;
-    height:80px;
-    object-fit:cover;
-    border-radius:50%;
-    margin:auto;
+    animation:ticketAppear .5s ease;
 
 }
 
+@keyframes ticketAppear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
 
 
-.ticket h2{
+    to{
 
-    color:#8b4513;
-    margin-top:15px;
-    font-size:28px;
+        opacity:1;
+        transform:translateY(0);
 
-}
-
-
-
-.ticket-title{
-
-    color:#e67e22;
-    font-weight:bold;
-    letter-spacing:2px;
-
-}
-
-
-
-.ticket hr{
-
-    border:none;
-    border-top:1px dashed #ccc;
-    margin:20px 0;
-
-}
-
-
-
-.ticket p{
-
-    text-align:left;
-    margin:12px 0;
-    font-size:16px;
-
-}
-
-
-
-.ticket strong{
-
-    color:#8b4513;
-
-}
-
-
-
-.thanks{
-
-    text-align:center !important;
-    font-weight:bold;
-    color:#8b4513;
-
-}
-
-
-
-.ticket-section .order-btn{
-
-    display:block;
-    margin:20px auto;
+    }
 
 }

@@ -8,6 +8,7 @@ let currentOrder = null;
 
 
 
+
 function sendOrder(event){
 
     event.preventDefault();
@@ -25,7 +26,6 @@ function sendOrder(event){
     const location = document.getElementById("location").value.trim();
 
     const message = document.getElementById("message").value.trim();
-
 
 
 
@@ -101,8 +101,7 @@ function sendOrder(event){
 
 
 
-    // SCROLL TO TICKET
-
+    // MOVE TO TICKET
 
     ticket.scrollIntoView({
 
@@ -122,21 +121,26 @@ function sendOrder(event){
 
 
 
-
 // ===============================
 // GENERATE TICKET IMAGE
 // ===============================
+
 
 function generateTicketImage(){
 
 
     if(!currentOrder){
 
+
         alert("Please place your order first");
+
 
         return;
 
+
     }
+
+
 
 
 
@@ -144,83 +148,87 @@ function generateTicketImage(){
 
 
 
+
     if(!ticket){
+
 
         alert("Ticket not found");
 
+
         return;
+
 
     }
 
 
 
 
+
+
+
     html2canvas(ticket, {
 
-        scale:3
+
+        scale:3,
+
+        backgroundColor:"#ffffff"
+
 
     })
+
+
 
     .then(canvas => {
 
 
 
-        const image = canvas.toDataURL("image/png");
+        canvas.toBlob(async function(blob){
 
 
 
-        const link = document.createElement("a");
+            const file = new File(
 
+                [blob],
 
-        link.href = image;
+                "Kamotas-Order-Ticket.png",
 
+                {
 
-        link.download = "Kamotas-Order-Ticket.png";
+                    type:"image/png"
 
+                }
 
-        link.click();
-
-
-
-
-
-        alert(
-        "Ticket created successfully. Now share the image on WhatsApp."
-        );
+            );
 
 
 
-    })
-
-    .catch(error => {
-
-
-        console.log(error);
-
-
-        alert("Failed to create ticket image");
-
-
-    });
 
 
 
-}
+            // SHARE DIRECTLY ON MOBILE
 
 
-            // MOBILE SHARE
+            if(
+                navigator.share &&
+                navigator.canShare &&
+                navigator.canShare({
 
-            if(navigator.share){
+                    files:[file]
+
+                })
+
+            ){
 
 
 
                 navigator.share({
 
+                    title:
+                    "Kamotas Chapati Order",
 
-                    title:"Kamotas Chapati Order",
 
-
-                    text:"Kamotas Chapati Order Ticket",
+                    text:
+                    "Kamotas Chapati Order Ticket",
 
 
                     files:[file]
@@ -228,12 +236,13 @@ function generateTicketImage(){
 
                 })
 
-                .catch(error => {
+                .catch(error=>{
+
 
                     console.log(error);
 
-                });
 
+                });
 
 
 
@@ -242,22 +251,32 @@ function generateTicketImage(){
 
 
 
+
+
+
+            // DESKTOP FALLBACK
+
+
             else{
 
-
-                // DESKTOP FALLBACK
 
 
                 const link = document.createElement("a");
 
 
-                link.download = "Kamotas-Order-Ticket.png";
+
+                link.download =
+                "Kamotas-Order-Ticket.png";
 
 
-                link.href = canvas.toDataURL();
+
+                link.href =
+                canvas.toDataURL("image/png");
+
 
 
                 link.click();
+
 
 
 
@@ -266,14 +285,29 @@ function generateTicketImage(){
                 );
 
 
-            }
 
+            }
 
 
 
 
         });
 
+
+
+    })
+
+
+
+    .catch(error=>{
+
+
+        console.log(error);
+
+
+        alert(
+        "Failed to create ticket image"
+        );
 
 
     });

@@ -244,7 +244,6 @@ function sendTicketWhatsApp(){
 
 
 
-
     const whatsappNumber = "255782722871";
 
 

@@ -115,15 +115,19 @@ Kamotas Chapati
 
 
 
-
-
 <!-- ==========================
- HERO
+     HERO + QUICK ORDER
 ========================== -->
 
 
 <section class="hero" id="home">
 
+
+<div class="hero-container">
+
+
+
+<!-- HERO TEXT -->
 
 <div class="hero-content">
 
@@ -134,23 +138,26 @@ Fresh Chapati Made With Love
 
 
 
-
 <p>
 
-Fresh affordable meals prepared with quality ingredients.
+Enjoy delicious, fresh and affordable meals prepared with quality ingredients.
 
 </p>
 
 
 
 
-<a href="#order" class="btn">
+
+<div class="hero-buttons">
 
 
-<i class="fa-brands fa-whatsapp"></i>
+<a href="#menu" class="btn">
 
 
-Order Now
+<i class="fa-solid fa-utensils"></i>
+
+
+View Menu
 
 
 </a>
@@ -160,9 +167,218 @@ Order Now
 </div>
 
 
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ORDER FORM CARD -->
+
+
+<div class="hero-order">
+
+
+
+<div class="hero-order-title">
+
+
+<h2>
+Place Your Order
+</h2>
+
+
+<p>
+Order fresh meals instantly
+</p>
+
+
+</div>
+
+
+
+
+
+
+<form 
+class="order-form"
+onsubmit="sendOrder(event)">
+
+
+
+
+
+
+<input
+
+type="text"
+
+id="name"
+
+placeholder="Your Name"
+
+required>
+
+
+
+
+
+
+
+<input
+
+type="tel"
+
+id="phone"
+
+placeholder="Phone Number"
+
+required>
+
+
+
+
+
+
+
+
+<select id="food" required>
+
+
+<option value="">
+
+Select Your Meal
+
+</option>
+
+
+<option>
+Fresh Chapati
+</option>
+
+
+<option>
+Chapati + Beans
+</option>
+
+
+<option>
+Chapati + Supu ya Kuku
+</option>
+
+
+<option>
+Chapati + Supu ya Ng'ombe
+</option>
+
+
+<option>
+Chapati + Roast Maini
+</option>
+
+
+<option>
+Chapati + Juice ya Matunda
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+<input
+
+type="number"
+
+id="quantity"
+
+placeholder="Quantity"
+
+required>
+
+
+
+
+
+
+
+
+<input
+
+type="text"
+
+id="location"
+
+placeholder="Delivery Location"
+
+required>
+
+
+
+
+
+
+
+
+<textarea
+
+id="message"
+
+placeholder="Additional Note">
+
+</textarea>
+
+
+
+
+
+
+
+
+<button
+
+type="submit"
+
+class="order-btn">
+
+
+<i class="fa-brands fa-whatsapp"></i>
+
+
+Place Order
+
+
+</button>
+
+
+
+
+
+
+</form>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
 </section>
-
-
 
 
 
@@ -607,207 +823,6 @@ Quick and reliable service.
 
 
 
-
-
-
-
-<!-- ==========================
-     ORDER FORM
-========================== -->
-
-
-<section class="order" id="order">
-
-
-<div class="section-title">
-
-
-<h2>
-Place Your Order
-</h2>
-
-
-<p>
-Order fresh meals from Kamotas Chapati
-</p>
-
-
-</div>
-
-
-
-
-
-
-<form class="order-form"
-onsubmit="sendOrder(event)">
-
-
-
-
-
-
-<input
-
-type="text"
-
-id="name"
-
-placeholder="Your Name"
-
-required>
-
-
-
-
-<input
-
-type="tel"
-
-id="phone"
-
-placeholder="Phone Number"
-
-required>
-
-
-
-
-
-
-<select id="food" required>
-
-
-<option value="">
-
-Select Your Meal
-
-</option>
-
-
-<option>
-
-Fresh Chapati
-
-</option>
-
-
-<option>
-
-Chapati + Beans
-
-</option>
-
-
-<option>
-
-Chapati + Supu ya Kuku
-
-</option>
-
-
-<option>
-
-Chapati + Supu ya Ng'ombe
-
-</option>
-
-
-<option>
-
-Chapati + Roast Maini
-
-</option>
-
-
-<option>
-
-Chapati + Juice ya Matunda
-
-</option>
-
-
-
-</select>
-
-
-
-
-
-
-
-
-<input
-
-type="number"
-
-id="quantity"
-
-placeholder="Quantity"
-
-required>
-
-
-
-
-
-
-
-<input
-
-type="text"
-
-id="location"
-
-placeholder="Delivery Location"
-
-required>
-
-
-
-
-
-
-
-
-<textarea
-
-id="message"
-
-placeholder="Additional Note">
-
-</textarea>
-
-
-
-
-
-
-
-<button
-
-type="submit"
-
-class="order-btn">
-
-
-<i class="fa-brands fa-whatsapp"></i>
-
-
-Place Order
-
-
-</button>
-
-
-
-
-
-</form>
-
-
-
-</section>
 
 
 

@@ -436,76 +436,240 @@ Place Order
      ORDER TICKET
 ========================== -->
 
+<!-- ==========================
+     PROFESSIONAL ORDER TICKET
+========================== -->
+
 <section class="ticket-section" id="ticket">
 
-    <div class="ticket">
 
-        <img src="assets/images/logo.png"
-             alt="Kamotas Logo"
-             class="ticket-logo">
+<div class="ticket">
 
-        <h2>KAMOTAS CHAPATI</h2>
 
-        <p class="ticket-title">
-            CUSTOMER ORDER TICKET
-        </p>
+<div class="ticket-header">
 
-        <hr>
 
-        <!-- DOWNLOAD BUTTON -->
-        <div class="ticket-download">
+<img src="assets/images/logo.png"
+class="ticket-logo">
 
-            <button
-                type="button"
-                onclick="downloadTicketImage()"
-                title="Download Ticket">
 
-                <i class="fa-solid fa-download"></i>
+<h2>KAMOTAS CHAPATI</h2>
 
-            </button>
 
-            <p>Download Ticket</p>
+<p>
+Fresh Taste • Quality Service
+</p>
 
-        </div>
 
-        <hr>
+<span class="ticket-status">
+ORDER RECEIVED
+</span>
 
-        <p><strong>Order ID:</strong> <span id="orderId"></span></p>
 
-        <p><strong>Customer:</strong> <span id="ticketName"></span></p>
+</div>
 
-        <p><strong>Phone:</strong> <span id="ticketPhone"></span></p>
 
-        <p><strong>Meal:</strong> <span id="ticketFood"></span></p>
 
-        <p><strong>Quantity:</strong> <span id="ticketQuantity"></span></p>
 
-        <p><strong>Location:</strong> <span id="ticketLocation"></span></p>
+<hr>
 
-        <p><strong>Message:</strong> <span id="ticketMessage"></span></p>
 
-        <hr>
 
-        <p class="thanks">
-            ❤️ Thank you for choosing
-            <strong>Kamotas Chapati</strong>
-        </p>
 
-    </div>
+<div class="ticket-info">
 
-    <button
-        type="button"
-        class="whatsapp-order-btn"
-        onclick="sendTicketWhatsApp()">
 
-        <i class="fa-brands fa-whatsapp"></i>
+<div class="ticket-row">
 
-        Send Order to WhatsApp
+<span>
+Order ID
+</span>
 
-    </button>
+<strong id="orderId">
+</strong>
+
+</div>
+
+
+
+<div class="ticket-row">
+
+<span>
+Customer
+</span>
+
+<strong id="ticketName">
+</strong>
+
+</div>
+
+
+
+
+<div class="ticket-row">
+
+<span>
+Phone
+</span>
+
+<strong id="ticketPhone">
+</strong>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="ticket-title-box">
+
+ORDER DETAILS
+
+</div>
+
+
+
+
+
+<div class="ticket-info">
+
+
+
+<div class="ticket-row">
+
+<span>
+Meal
+</span>
+
+<strong id="ticketFood">
+</strong>
+
+</div>
+
+
+
+<div class="ticket-row">
+
+<span>
+Quantity
+</span>
+
+<strong id="ticketQuantity">
+</strong>
+
+</div>
+
+
+
+<div class="ticket-row">
+
+<span>
+Delivery Location
+</span>
+
+<strong id="ticketLocation">
+</strong>
+
+</div>
+
+
+
+
+<div class="ticket-row">
+
+<span>
+Message
+</span>
+
+<strong id="ticketMessage">
+</strong>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+<div class="ticket-footer">
+
+
+<p>
+Thank you for ordering with us ❤️
+</p>
+
+
+<p>
+Kamotas Chapati • Dodoma
+</p>
+
+
+<p>
+0782 722 871
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="ticket-download">
+
+
+<button onclick="downloadTicketImage()">
+
+<i class="fa-solid fa-download"></i>
+
+</button>
+
+
+<p>
+Download Ticket
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<button 
+onclick="sendTicketWhatsApp()"
+class="whatsapp-order-btn">
+
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Send Order WhatsApp
+
+
+</button>
+
+
 
 </section>
-
 
 
 <!-- ==========================

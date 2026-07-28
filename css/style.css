@@ -1124,3 +1124,274 @@ footer{
 
 
 }
+
+
+/* ==========================
+   THERMAL RECEIPT STYLE
+========================== */
+
+
+.ticket{
+
+    position:relative;
+
+    background:#fff;
+
+    max-width:420px;
+
+    margin:40px auto;
+
+    padding:35px 25px;
+
+    color:#222;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    animation:receipt .7s ease;
+
+
+}
+
+
+
+
+/* torn paper effect */
+
+
+.ticket::before,
+.ticket::after{
+
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+
+    height:15px;
+
+
+    background:
+
+    radial-gradient(circle, transparent 8px, white 9px);
+
+
+    background-size:20px 20px;
+
+
+}
+
+
+
+
+.ticket::before{
+
+    top:-10px;
+
+}
+
+
+
+.ticket::after{
+
+    bottom:-10px;
+
+}
+
+
+
+
+
+
+
+@keyframes receipt{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(-50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+.ticket-header{
+
+text-align:center;
+
+}
+
+
+
+.ticket-logo{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+margin:auto;
+
+}
+
+
+
+
+
+.ticket-header h2{
+
+color:#8b4513;
+
+margin:10px 0;
+
+}
+
+
+
+
+
+.ticket-status{
+
+
+display:inline-block;
+
+background:#25D366;
+
+color:white;
+
+padding:5px 15px;
+
+border-radius:20px;
+
+font-size:12px;
+
+
+}
+
+
+
+
+
+.ticket-row{
+
+
+display:flex;
+
+justify-content:space-between;
+
+border-bottom:1px dashed #ddd;
+
+padding:10px 0;
+
+font-size:14px;
+
+
+}
+
+
+
+
+
+.ticket-row span{
+
+color:#777;
+
+}
+
+
+
+
+
+.ticket-title-box{
+
+
+text-align:center;
+
+font-weight:bold;
+
+margin:20px 0;
+
+letter-spacing:2px;
+
+}
+
+
+
+
+.qr-section{
+
+
+display:flex;
+
+justify-content:center;
+
+margin:20px 0;
+
+}
+
+
+
+
+.ticket-footer{
+
+
+text-align:center;
+
+font-size:13px;
+
+color:#666;
+
+}
+
+
+
+.ticket-download{
+
+
+text-align:center;
+
+margin-top:20px;
+
+
+}
+
+
+
+.ticket-download button{
+
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+border:none;
+
+background:#333;
+
+color:white;
+
+cursor:pointer;
+
+
+}

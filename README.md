@@ -1,2 +1,13 @@
-# kamotas-chapati-website
-A modern responsive restaurant website for Kamotas Chapati Dodoma.
+assets
+└── images
+    ├── logo.png
+    ├── hero-food.jpg
+    ├── restaurant.jpg
+    ├── chapati.jpg
+    ├── maharage.jpg
+    ├── supu.jpg
+    ├── juice.jpg
+    ├── roast-maini.jpg
+    ├── gallery-1.jpg
+    ├── gallery-2.jpg
+    └── gallery-3.jpg

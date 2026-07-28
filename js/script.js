@@ -1,4 +1,53 @@
 // ===============================
+// MOBILE NAVBAR
+// ===============================
+
+
+const menuToggle = document.getElementById("menu-toggle");
+
+const navLinks = document.getElementById("nav-links");
+
+
+
+if(menuToggle){
+
+
+    menuToggle.addEventListener("click",()=>{
+
+
+        navLinks.classList.toggle("active");
+
+
+    });
+
+
+}
+
+
+
+document.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+
+    link.addEventListener("click",()=>{
+
+
+        navLinks.classList.remove("active");
+
+
+    });
+
+
+});
+
+
+
+
+
+
+
+
+// ===============================
 // ORDER SYSTEM
 // ===============================
 
@@ -11,31 +60,50 @@ let currentOrder = null;
 
 function sendOrder(event){
 
+
     event.preventDefault();
 
 
 
-    const name = document.getElementById("name").value.trim();
 
-    const phone = document.getElementById("phone").value.trim();
-
-    const food = document.getElementById("food").value;
-
-    const quantity = document.getElementById("quantity").value;
-
-    const location = document.getElementById("location").value.trim();
-
-    const message = document.getElementById("message").value.trim();
+    const name =
+    document.getElementById("name").value.trim();
 
 
 
+    const phone =
+    document.getElementById("phone").value.trim();
 
 
 
-    // CREATE ORDER NUMBER
+    const food =
+    document.getElementById("food").value;
 
-    const orderNumber = 
-    "KMT-" + Math.floor(10000 + Math.random() * 90000);
+
+
+    const quantity =
+    document.getElementById("quantity").value;
+
+
+
+    const location =
+    document.getElementById("location").value.trim();
+
+
+
+    const message =
+    document.getElementById("message").value.trim();
+
+
+
+
+
+
+    const orderNumber =
+
+    "KMT-" +
+
+    Math.floor(10000 + Math.random()*90000);
 
 
 
@@ -45,13 +113,21 @@ function sendOrder(event){
 
     currentOrder = {
 
+
         orderNumber,
+
         name,
+
         phone,
+
         food,
+
         quantity,
+
         location,
+
         message
+
 
     };
 
@@ -61,30 +137,41 @@ function sendOrder(event){
 
 
 
-
-    // DISPLAY TICKET DATA
-
-
-    document.getElementById("orderId").innerText = orderNumber;
+    // DISPLAY TICKET
 
 
-    document.getElementById("ticketName").innerText = name;
+    document.getElementById("orderId").innerText =
+    orderNumber;
 
 
-    document.getElementById("ticketPhone").innerText = phone;
+
+    document.getElementById("ticketName").innerText =
+    name;
 
 
-    document.getElementById("ticketFood").innerText = food;
+
+    document.getElementById("ticketPhone").innerText =
+    phone;
 
 
-    document.getElementById("ticketQuantity").innerText = quantity;
+
+    document.getElementById("ticketFood").innerText =
+    food;
 
 
-    document.getElementById("ticketLocation").innerText = location;
+
+    document.getElementById("ticketQuantity").innerText =
+    quantity;
 
 
-    document.getElementById("ticketMessage").innerText = message;
 
+    document.getElementById("ticketLocation").innerText =
+    location;
+
+
+
+    document.getElementById("ticketMessage").innerText =
+    message;
 
 
 
@@ -95,21 +182,38 @@ function sendOrder(event){
     // SHOW TICKET
 
 
-    const ticket = document.getElementById("ticket");
-
-
-    ticket.style.display = "block";
-
+    const ticketSection =
+    document.getElementById("ticket");
 
 
 
+    ticketSection.style.display="block";
 
 
 
-    // SCROLL TO TICKET
 
 
-    ticket.scrollIntoView({
+
+    // SAVE TEMPORARY
+
+
+    localStorage.setItem(
+
+        "kamotasOrder",
+
+        JSON.stringify(currentOrder)
+
+    );
+
+
+
+
+
+
+    // MOVE TO TICKET
+
+
+    ticketSection.scrollIntoView({
 
         behavior:"smooth"
 
@@ -117,10 +221,7 @@ function sendOrder(event){
 
 
 
-
 }
-
-
 
 
 
@@ -139,7 +240,8 @@ function downloadTicketImage(){
 
 
 
-    const ticket = document.querySelector(".ticket");
+    const ticket =
+    document.querySelector(".ticket");
 
 
 
@@ -147,7 +249,6 @@ function downloadTicketImage(){
 
 
         alert("Ticket not found");
-
 
         return;
 
@@ -159,13 +260,11 @@ function downloadTicketImage(){
 
 
 
-    html2canvas(ticket, {
-
+    html2canvas(ticket,{
 
         scale:3,
 
         backgroundColor:"#ffffff"
-
 
     })
 
@@ -175,7 +274,8 @@ function downloadTicketImage(){
 
 
 
-        const link = document.createElement("a");
+        const link =
+        document.createElement("a");
 
 
 
@@ -193,6 +293,8 @@ function downloadTicketImage(){
 
 
 
+
+
     })
 
 
@@ -203,7 +305,7 @@ function downloadTicketImage(){
         console.log(error);
 
 
-        alert("Failed to download ticket");
+        alert("Ticket download failed");
 
 
     });
@@ -232,10 +334,31 @@ function sendTicketWhatsApp(){
     if(!currentOrder){
 
 
-        alert("Please place your order first");
+
+        const saved =
+        localStorage.getItem("kamotasOrder");
 
 
-        return;
+
+        if(saved){
+
+
+            currentOrder =
+            JSON.parse(saved);
+
+
+        }
+
+        else{
+
+
+            alert("Please place your order first");
+
+
+            return;
+
+
+        }
 
 
     }
@@ -244,16 +367,22 @@ function sendTicketWhatsApp(){
 
 
 
-    const whatsappNumber = "255782722871";
+
+
+    const whatsappNumber =
+
+    "255782722871";
 
 
 
 
 
 
-    const orderMessage =
 
-`🍽️ *KAMOTAS CHAPATI ORDER*
+    const orderText =
+
+`🍽️ KAMOTAS CHAPATI ORDER
+
 
 🆔 Order ID:
 ${currentOrder.orderNumber}
@@ -291,7 +420,10 @@ ${currentOrder.message}
 
 
 
+
+
     const whatsappURL =
+
 
     "https://wa.me/" +
 
@@ -299,7 +431,7 @@ ${currentOrder.message}
 
     "?text=" +
 
-    encodeURIComponent(orderMessage);
+    encodeURIComponent(orderText);
 
 
 
@@ -315,6 +447,33 @@ ${currentOrder.message}
 
     );
 
+
+}
+
+
+
+
+
+
+
+
+
+// ===============================
+// FOOTER YEAR
+// ===============================
+
+
+const footer =
+document.querySelector("footer p");
+
+
+
+if(footer){
+
+
+    footer.innerHTML =
+
+    `© ${new Date().getFullYear()} Kamotas Chapati | All Rights Reserved`;
 
 
 }

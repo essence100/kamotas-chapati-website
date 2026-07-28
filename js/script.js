@@ -218,83 +218,14 @@ function sendOrder(event){
 
 
 
-// ===============================
-// CREATE QR CODE
-// ===============================
-
-
-function createQRCode(){
-
-
-
-    const qr =
-    document.getElementById("qrcode");
-
-
-
-    if(!qr || !currentOrder){
-
-        return;
-
-    }
-
-
-
-
-    // clear old QR
-
-
-    qr.innerHTML="";
-
-
-
-
-
-
-    const qrText =
-
-`
-Kamotas Chapati
-
-Order ID:
-${currentOrder.orderNumber}
-
-
-Customer:
-${currentOrder.name}
-
-
-Meal:
-${currentOrder.food}
-
-
-Phone:
-${currentOrder.phone}
-
-
-WhatsApp:
-+255782722871
-`;
-
-
-
-
-
-
-
-    new QRCode(qr,{
-
-
-        text:qrText,
-
-
-        width:120,
-
-
-        height:120
-
-
-    });
+new QRCode(qr,{
+    text:
+    `Kamotas Chapati
+Order:${currentOrder.orderNumber}
+Phone:+255782722871`,
+    width:90,
+    height:90
+});
 
 
 

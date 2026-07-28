@@ -1148,150 +1148,74 @@ translateY(0);
 
 }
 
-/* ==========================
-   MENU SECTION
-========================== */
-
-/* ==========================
-   MENU LOGO
-========================== */
-
-
 .menu-logo{
 
-    width:90px;
-
-    height:90px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    margin:0 auto 20px;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.2);
+width:90px;
+height:90px;
+object-fit:cover;
+margin:0 auto 20px;
+border-radius:50%;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
 
 }
-
-
-
-.cards{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-
-
-    gap:30px;
-
-
-}
-
 
 
 
 .card{
 
-
-    background:white;
-
-
-    border-radius:20px;
-
-
-    overflow:hidden;
-
-
-    box-shadow:
-
-
-    0 10px 25px rgba(0,0,0,.15);
-
-
-
-    text-align:center;
-
-
-    transition:.3s;
-
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+transition:.4s;
 
 }
-
-
 
 
 
 .card:hover{
 
-
-    transform:translateY(-10px);
-
+transform:translateY(-10px);
 
 }
-
 
 
 
 .card img{
 
-
-    height:230px;
-
-
-    object-fit:cover;
-
+height:230px;
+width:100%;
+object-fit:cover;
 
 }
 
 
 
+.menu-content{
 
-
-.card h3{
-
-
-    color:#8b4513;
-
-
-    margin:20px 0 10px;
-
+padding:25px;
+text-align:center;
 
 }
 
 
 
+.menu-content h3{
 
-
-.card p{
-
-
-    padding:0 20px;
-
-
-    color:#555;
-
+color:#8b4513;
+font-size:24px;
 
 }
 
 
 
+.menu-content h4{
 
-
-.card h4{
-
-
-    color:#e67e22;
-
-
-    margin:20px;
-
+margin-top:15px;
+font-size:22px;
+color:#e67e22;
 
 }
-
 
 
 

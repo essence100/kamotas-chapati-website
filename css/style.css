@@ -1,965 +1,89 @@
-/* =====================================
-   KAMOTAS CHAPATI WEBSITE
-   FINAL PROFESSIONAL STYLE
-   PART 1/3
-===================================== */
-
-
-
 /* ==========================
    GLOBAL SETTINGS
 ========================== */
 
 
 *{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
+
+html{
+scroll-behavior:smooth;
+}
 
 
 body{
 
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 
-    background:#fffaf2;
+background:#020617;
 
-    color:#333;
+color:white;
 
-    line-height:1.6;
+line-height:1.6;
 
 }
+
+
 
 
 
 img{
 
-    width:100%;
+max-width:100%;
 
-    display:block;
+display:block;
 
 }
+
+
 
 
 
 a{
 
-    text-decoration:none;
+text-decoration:none;
+
+color:inherit;
 
 }
+
+
 
 
 
 section{
 
-    padding:80px 8%;
+padding:80px 8%;
 
 }
 
 
-
-
-/* ==========================
-   NAVBAR
-========================== */
-
-
-header{
-
-    position:fixed;
-
-    width:100%;
-
-    top:0;
-
-    left:0;
-
-    z-index:1000;
-
-}
-
-
-
-
-.navbar{
-
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:15px 8%;
-
-    background:#8b4513;
-
-    box-shadow:
-
-    0 5px 20px rgba(0,0,0,.25);
-
-
-}
-
-
-
-
-.logo{
-
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    color:white;
-
-
-}
-
-
-
-.logo img{
-
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-
-}
-
-
-
-
-.logo h2{
-
-
-    font-size:22px;
-
-
-}
-
-
-
-
-
-
-
-.nav-links{
-
-
-    display:flex;
-
-    gap:30px;
-
-    list-style:none;
-
-
-}
-
-
-
-.nav-links a{
-
-
-    color:white;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-
-}
-
-
-
-.nav-links a:hover{
-
-
-    color:#ffd700;
-
-
-}
-
-
-
-
-
-.menu-toggle{
-
-
-    display:none;
-
-    color:white;
-
-    font-size:25px;
-
-    cursor:pointer;
-
-
-}
-
-
-
-
-
-
-
-
-/* ==========================
-   HERO SECTION
-========================== */
-
-
-
-.hero{
-
-
-    min-height:100vh;
-
-
-    background:
-
-
-    linear-gradient(
-
-    rgba(0,0,0,.6),
-
-    rgba(0,0,0,.6)
-
-    ),
-
-
-    url("../assets/images/restaurant.jpg");
-
-
-
-    background-size:cover;
-
-
-    background-position:center;
-
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-
-    text-align:center;
-
-
-
-    color:white;
-
-
-
-}
-
-
-
-
-
-.hero-content{
-
-
-    max-width:850px;
-
-
-    animation:heroShow 1s ease;
-
-
-}
-
-
-
-
-
-.hero h1{
-
-
-    font-size:60px;
-
-
-    font-weight:800;
-
-
-    margin-bottom:25px;
-
-
-
-}
-
-
-
-
-.hero p{
-
-
-    font-size:20px;
-
-
-    margin-bottom:35px;
-
-
-    color:#f5f5f5;
-
-
-}
-
-
-
-
-.btn{
-
-
-    display:inline-flex;
-
-
-    align-items:center;
-
-
-    gap:10px;
-
-
-
-    background:#ffd700;
-
-
-    color:#8b4513;
-
-
-
-    padding:16px 40px;
-
-
-    border-radius:50px;
-
-
-
-    font-weight:bold;
-
-
-    font-size:17px;
-
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.btn:hover{
-
-
-    background:white;
-
-
-    transform:translateY(-5px);
-
-
-}
-
-
-
-
-@keyframes heroShow{
-
-
-from{
-
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-
-}
-
-
-to{
-
-
-    opacity:1;
-
-    transform:translateY(0);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================
-   HERO WITH ORDER CARD
-========================== */
-
-
-.hero{
-
-    min-height:100vh;
-
-    background:
-
-    linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.55)
-    ),
-
-    url("../assets/images/restaurant.jpg");
-
-
-    background-size:cover;
-
-    background-position:center;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    color:white;
-
-    padding:120px 8% 60px;
-
-
-}
-
-
-
-
-.hero-container{
-
-
-    width:100%;
-
-    max-width:1200px;
-
-
-    display:grid;
-
-    grid-template-columns:
-
-    1fr 420px;
-
-
-    gap:50px;
-
-
-    align-items:center;
-
-
-}
-
-
-
-
-
-/* LEFT TEXT */
-
-
-.hero-content{
-
-
-    max-width:650px;
-
-
-}
-
-
-
-
-.hero h1{
-
-
-    font-size:60px;
-
-    line-height:1.2;
-
-    margin-bottom:25px;
-
-
-    text-shadow:
-
-    0 5px 20px rgba(0,0,0,.5);
-
-
-}
-
-
-
-
-.hero p{
-
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    margin-bottom:30px;
-
-    color:#f5f5f5;
-
-
-}
-
-
-
-
-
-
-
-.hero-buttons{
-
-
-    margin-top:20px;
-
-
-}
-
-
-
-
-
-
-
-
-
-
-/* ==========================
-   GLASS ORDER CARD
-========================== */
-
-
-
-.hero-order{
-
-
-    background:
-
-    rgba(255,255,255,.12);
-
-
-    backdrop-filter:
-
-    blur(18px);
-
-
-
-    -webkit-backdrop-filter:
-
-    blur(18px);
-
-
-
-    border:
-
-    1px solid rgba(255,255,255,.25);
-
-
-
-    border-radius:30px;
-
-
-
-    padding:30px;
-
-
-
-    box-shadow:
-
-
-    0 25px 60px rgba(0,0,0,.35);
-
-
-
-    animation:
-
-    orderCard 1s ease;
-
-
-
-}
-
-
-
-
-
-
-
-
-@keyframes orderCard{
-
-
-from{
-
-
-opacity:0;
-
-transform:
-
-translateY(50px);
-
-
-}
-
-
-to{
-
-
-opacity:1;
-
-transform:
-
-translateY(0);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-.hero-order-title{
-
-
-    text-align:center;
-
-    margin-bottom:25px;
-
-
-}
-
-
-
-
-.hero-order-title h2{
-
-
-    color:white;
-
-    font-size:28px;
-
-    margin-bottom:5px;
-
-
-}
-
-
-
-
-
-.hero-order-title p{
-
-
-    color:#eee;
-
-    font-size:14px;
-
-
-}
-
-
-
-
-
-
-
-
-/* FORM INSIDE HERO */
-
-
-
-.hero-order .order-form{
-
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
-
-
-}
-
-
-
-
-
-
-
-
-.hero-order input,
-.hero-order select,
-.hero-order textarea{
-
-
-    width:100%;
-
-
-    padding:14px 18px;
-
-
-    border:none;
-
-
-    outline:none;
-
-
-    border-radius:15px;
-
-
-    background:
-
-    rgba(255,255,255,.9);
-
-
-    color:#333;
-
-
-    font-size:15px;
-
-
-
-}
-
-
-
-
-
-
-
-
-.hero-order textarea{
-
-
-    height:90px;
-
-    resize:none;
-
-
-}
-
-
-
-
-
-
-
-
-
-.hero-order input:focus,
-.hero-order select:focus,
-.hero-order textarea:focus{
-
-
-    box-shadow:
-
-    0 0 0 3px rgba(255,215,0,.4);
-
-
-}
-
-
-
-
-
-
-
-
-.hero-order .order-btn{
-
-
-    background:#25D366;
-
-
-    color:white;
-
-
-    border:none;
-
-
-    padding:16px;
-
-
-    border-radius:50px;
-
-
-    font-size:17px;
-
-
-    font-weight:bold;
-
-
-    cursor:pointer;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-
-
-
-
-
-.hero-order .order-btn:hover{
-
-
-    transform:
-
-    translateY(-5px);
-
-
-    background:#20bd5a;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* ==========================
- MOBILE HERO
-========================== */
-
-
-@media(max-width:900px){
-
-
-
-.hero-container{
-
-
-    grid-template-columns:1fr;
-
-
-    gap:40px;
-
-
-}
-
-
-
-.hero{
-
-
-    padding-top:120px;
-
-
-}
-
-
-
-.hero h1{
-
-
-    font-size:40px;
-
-
-}
-
-
-
-
-.hero-order{
-
-
-    width:100%;
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================
-   SECTION TITLE
-========================== */
 
 
 
 .section-title{
 
+text-align:center;
 
-    text-align:center;
-
-
-    margin-bottom:50px;
-
+margin-bottom:50px;
 
 }
+
 
 
 
 
 .section-title h2{
 
+font-size:40px;
 
-    color:#8b4513;
+color:#38bdf8;
 
-
-    font-size:38px;
-
+margin-bottom:10px;
 
 }
 
@@ -967,9 +91,133 @@ translateY(0);
 
 .section-title p{
 
+color:#cbd5e1;
 
-    color:#777;
+}
 
+
+
+
+
+
+
+/* ==========================
+ NAVBAR
+========================== */
+
+
+header{
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+}
+
+
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 8%;
+
+background:rgba(2,6,23,0.85);
+
+backdrop-filter:blur(15px);
+
+}
+
+
+
+
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+
+
+
+
+.logo img{
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+}
+
+
+
+
+
+.logo h2{
+
+color:#facc15;
+
+}
+
+
+
+
+
+.nav-links{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+
+
+
+
+
+.nav-links a{
+
+color:white;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+
+
+
+
+.nav-links a:hover{
+
+color:#38bdf8;
+
+}
+
+
+
+
+.menu-toggle{
+
+display:none;
+
+font-size:25px;
 
 }
 
@@ -982,26 +230,276 @@ translateY(0);
 
 
 /* ==========================
-   ABOUT SECTION
+ HERO
 ========================== */
 
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+background:
+
+linear-gradient(
+rgba(2,6,23,.75),
+rgba(2,6,23,.9)
+),
+
+url("../assets/images/hero-food.jpg");
+
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+
+
+
+.hero-container{
+
+display:grid;
+
+grid-template-columns:1fr 420px;
+
+gap:50px;
+
+align-items:center;
+
+}
+
+
+
+
+
+.hero-content h1{
+
+font-size:60px;
+
+line-height:1.1;
+
+margin-bottom:20px;
+
+}
+
+
+
+
+
+.hero-content p{
+
+font-size:20px;
+
+color:#cbd5e1;
+
+margin-bottom:30px;
+
+}
+
+
+
+
+
+.btn{
+
+background:#facc15;
+
+color:#020617;
+
+padding:14px 30px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+display:inline-block;
+
+}
+
+
+
+
+
+/* ==========================
+ GLASS ORDER CARD
+========================== */
+
+
+.hero-order{
+
+
+background:
+
+rgba(255,255,255,0.12);
+
+
+border:
+
+1px solid rgba(255,255,255,.25);
+
+
+backdrop-filter:blur(20px);
+
+
+padding:30px;
+
+
+border-radius:25px;
+
+
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+
+}
+
+
+
+
+
+.hero-order-title{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+
+
+.hero-order-title h2{
+
+color:#facc15;
+
+}
+
+
+
+
+
+.order-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+
+
+
+.order-form input,
+
+.order-form select,
+
+.order-form textarea{
+
+
+padding:14px;
+
+
+border-radius:12px;
+
+
+border:none;
+
+
+outline:none;
+
+
+background:white;
+
+
+color:#020617;
+
+
+}
+
+
+
+
+
+.order-form textarea{
+
+height:90px;
+
+resize:none;
+
+}
+
+
+
+
+
+.order-btn{
+
+
+padding:15px;
+
+
+border:none;
+
+
+border-radius:30px;
+
+
+background:#22c55e;
+
+
+color:white;
+
+
+font-size:17px;
+
+
+font-weight:bold;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+.order-btn:hover{
+
+transform:scale(1.03);
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+ ABOUT
+========================== */
 
 
 .about-container{
 
+display:grid;
 
-    display:grid;
+grid-template-columns:1fr 1fr;
 
+gap:50px;
 
-    grid-template-columns:1fr 1fr;
-
-
-    gap:50px;
-
-
-    align-items:center;
-
-
+align-items:center;
 
 }
 
@@ -1011,15 +509,7 @@ translateY(0);
 
 .about-image img{
 
-
-    border-radius:25px;
-
-
-    box-shadow:
-
-
-    0 15px 35px rgba(0,0,0,.2);
-
+border-radius:25px;
 
 }
 
@@ -1029,37 +519,11 @@ translateY(0);
 
 .about-text h3{
 
+font-size:35px;
 
-    font-size:30px;
+color:#facc15;
 
-
-    color:#8b4513;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-
-.about-text p{
-
-
-    margin-bottom:18px;
-
-
-}
-
-
-
-
-.about-details{
-
-
-    margin-top:25px;
-
+margin-bottom:20px;
 
 }
 
@@ -1069,31 +533,11 @@ translateY(0);
 
 .about-details div{
 
+margin:15px 0;
 
-    margin:15px 0;
-
-
-    font-weight:bold;
-
+color:#cbd5e1;
 
 }
-
-
-
-
-
-.about-details i{
-
-
-    color:#e67e22;
-
-
-    margin-right:10px;
-
-
-}
-
-
 
 
 
@@ -1101,35 +545,19 @@ translateY(0);
 
 .about-btn{
 
+display:inline-block;
 
-    display:inline-block;
+margin-top:20px;
 
+padding:12px 25px;
 
-    margin-top:20px;
+background:#38bdf8;
 
+border-radius:30px;
 
+color:#020617;
 
-    background:#8b4513;
-
-
-    color:white;
-
-
-
-    padding:13px 30px;
-
-
-
-    border-radius:30px;
-
-
-
-    font-weight:bold;
-
-
-
-    transition:.3s;
-
+font-weight:bold;
 
 }
 
@@ -1137,39 +565,66 @@ translateY(0);
 
 
 
-.about-btn:hover{
 
 
-    background:#ffd700;
 
 
-    color:#8b4513;
+/* ==========================
+ MENU
+========================== */
 
-
-}
 
 .menu-logo{
 
-width:90px;
-height:90px;
-object-fit:cover;
-margin:0 auto 20px;
+width:80px;
+
+margin:auto;
+
 border-radius:50%;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+margin-bottom:20px;
 
 }
+
+
+
+
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+
 
 
 
 .card{
 
-background:white;
+
+background:#0f172a;
+
+
 border-radius:25px;
+
+
 overflow:hidden;
-box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+
 transition:.4s;
 
+
 }
+
+
 
 
 
@@ -1181,42 +636,53 @@ transform:translateY(-10px);
 
 
 
+
+
 .card img{
 
-height:230px;
+height:220px;
+
 width:100%;
+
 object-fit:cover;
 
 }
 
 
 
+
+
 .menu-content{
 
 padding:25px;
-text-align:center;
 
 }
+
+
 
 
 
 .menu-content h3{
 
-color:#8b4513;
-font-size:24px;
+color:#facc15;
+
+font-size:25px;
 
 }
+
+
 
 
 
 .menu-content h4{
 
-margin-top:15px;
+color:#22c55e;
+
 font-size:22px;
-color:#e67e22;
+
+margin-top:15px;
 
 }
-
 
 
 
@@ -1225,25 +691,17 @@ color:#e67e22;
 
 
 /* ==========================
-   GALLERY SECTION
+ GALLERY
 ========================== */
-
 
 
 .gallery-container{
 
+display:grid;
 
-    display:grid;
+grid-template-columns:repeat(3,1fr);
 
-
-    grid-template-columns:
-
-
-    repeat(auto-fit,minmax(250px,1fr));
-
-
-    gap:25px;
-
+gap:25px;
 
 }
 
@@ -1253,29 +711,25 @@ color:#e67e22;
 
 .gallery-container img{
 
+height:300px;
 
-    height:250px;
+width:100%;
 
+object-fit:cover;
 
-    object-fit:cover;
+border-radius:25px;
 
-
-    border-radius:20px;
-
-
-    transition:.3s;
-
+transition:.4s;
 
 }
 
 
 
 
+
 .gallery-container img:hover{
 
-
-    transform:scale(1.05);
-
+transform:scale(1.05);
 
 }
 
@@ -1288,27 +742,22 @@ color:#e67e22;
 
 
 /* ==========================
-   FEATURES SECTION
+ FEATURES
 ========================== */
-
 
 
 .feature-box{
 
+display:grid;
 
-    display:grid;
+grid-template-columns:repeat(3,1fr);
 
+gap:30px;
 
-    grid-template-columns:
-
-
-    repeat(auto-fit,minmax(250px,1fr));
-
-
-    gap:30px;
-
+text-align:center;
 
 }
+
 
 
 
@@ -1316,55 +765,26 @@ color:#e67e22;
 .feature-box div{
 
 
-    background:white;
+background:#0f172a;
 
 
-    padding:35px;
+padding:35px;
 
 
-    border-radius:20px;
-
-
-    text-align:center;
-
-
-    box-shadow:
-
-
-    0 10px 25px rgba(0,0,0,.12);
-
-
-    transition:.3s;
+border-radius:25px;
 
 
 }
 
-
-
-
-
-.feature-box div:hover{
-
-
-    transform:translateY(-8px);
-
-
-}
 
 
 
 
 .feature-box i{
 
+font-size:35px;
 
-    font-size:40px;
-
-
-    color:#e67e22;
-
-
-    margin-bottom:15px;
-
+color:#38bdf8;
 
 }
 
@@ -1374,12 +794,9 @@ color:#e67e22;
 
 .feature-box h3{
 
+margin:15px;
 
-    color:#8b4513;
-
-
-    margin-bottom:10px;
-
+color:#facc15;
 
 }
 
@@ -1392,195 +809,13 @@ color:#e67e22;
 
 
 /* ==========================
-   ORDER SECTION
-========================== */
-
-
-
-.order{
-
-
-    background:#fff8ed;
-
-
-}
-
-
-
-
-
-.order-form{
-
-
-    max-width:600px;
-
-
-    margin:auto;
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    gap:20px;
-
-
-}
-
-
-
-
-
-
-.order-form input,
-.order-form select,
-.order-form textarea{
-
-
-    width:100%;
-
-
-    padding:15px;
-
-
-    border-radius:15px;
-
-
-    border:1px solid #ddd;
-
-
-    font-size:16px;
-
-
-    outline:none;
-
-
-    background:white;
-
-
-}
-
-
-
-
-
-.order-form textarea{
-
-
-    height:120px;
-
-
-    resize:none;
-
-
-}
-
-
-
-
-
-.order-form input:focus,
-.order-form select:focus,
-.order-form textarea:focus{
-
-
-    border-color:#8b4513;
-
-
-}
-
-
-
-
-
-
-
-
-.order-btn{
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    gap:10px;
-
-
-
-    background:#25D366;
-
-
-
-    color:white;
-
-
-
-    border:none;
-
-
-
-    padding:16px;
-
-
-
-    border-radius:50px;
-
-
-
-    font-size:18px;
-
-
-
-    font-weight:bold;
-
-
-
-    cursor:pointer;
-
-
-
-    transition:.3s;
-
-
-}
-
-
-
-
-
-.order-btn:hover{
-
-
-    transform:translateY(-5px);
-
-
-    box-shadow:
-
-
-    0 10px 25px rgba(0,0,0,.2);
-
-
-}
-
-/* ==========================
-   PROFESSIONAL TICKET
+ TICKET
 ========================== */
 
 
 .ticket-section{
 
-    display:none;
-
-    padding:70px 8%;
-
-    background:#fffaf2;
+text-align:center;
 
 }
 
@@ -1591,169 +826,38 @@ color:#e67e22;
 .ticket{
 
 
-    max-width:420px;
+background:white;
 
 
-    margin:40px auto;
+color:#020617;
 
 
-    background:white;
+max-width:400px;
 
 
-    padding:35px 25px;
+margin:auto;
 
 
-    position:relative;
+padding:30px;
 
 
-    color:#222;
+border-radius:20px;
 
 
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,.18);
-
-
-
-    animation:receiptShow .7s ease;
+position:relative;
 
 
 }
 
-
-
-
-
-/* THERMAL RECEIPT TEAR EFFECT */
-
-
-.ticket::before,
-.ticket::after{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    left:0;
-
-
-    width:100%;
-
-
-    height:15px;
-
-
-
-    background:
-
-
-    radial-gradient(circle, transparent 8px, white 9px);
-
-
-
-    background-size:20px 20px;
-
-
-}
-
-
-
-
-.ticket::before{
-
-
-    top:-10px;
-
-
-}
-
-
-
-
-
-.ticket::after{
-
-
-    bottom:-10px;
-
-
-}
-
-
-
-
-
-@keyframes receiptShow{
-
-
-from{
-
-
-    opacity:0;
-
-
-    transform:translateY(-50px);
-
-
-}
-
-
-
-to{
-
-
-    opacity:1;
-
-
-    transform:translateY(0);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* TICKET HEADER */
-
-
-.ticket-header{
-
-
-    text-align:center;
-
-
-}
 
 
 
 
 .ticket-logo{
 
+width:70px;
 
-    width:75px;
-
-
-    height:75px;
-
-
-    object-fit:cover;
-
-
-    border-radius:50%;
-
-
-    margin:auto;
-
+margin:auto;
 
 }
 
@@ -1763,30 +867,7 @@ to{
 
 .ticket-header h2{
 
-
-    color:#8b4513;
-
-
-    margin:15px 0 5px;
-
-
-    font-size:26px;
-
-
-}
-
-
-
-
-
-.ticket-header p{
-
-
-    color:#777;
-
-
-    font-size:14px;
-
+color:#020617;
 
 }
 
@@ -1797,47 +878,19 @@ to{
 .ticket-status{
 
 
-    display:inline-block;
+background:#22c55e;
 
 
-    margin-top:15px;
+color:white;
 
 
-    background:#25D366;
+padding:5px 15px;
 
 
-    color:white;
+border-radius:20px;
 
 
-    padding:6px 18px;
-
-
-    border-radius:30px;
-
-
-    font-size:12px;
-
-
-    font-weight:bold;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* TICKET DATA */
-
-
-.ticket-info{
-
-
-    margin-top:25px;
+display:inline-block;
 
 
 }
@@ -1849,53 +902,16 @@ to{
 .ticket-row{
 
 
-    display:flex;
+display:flex;
 
 
-    justify-content:space-between;
+justify-content:space-between;
 
 
-    gap:15px;
-
-
-    padding:12px 0;
-
-
-    border-bottom:1px dashed #ddd;
-
-
-    font-size:14px;
+padding:10px 0;
 
 
 }
-
-
-
-
-
-.ticket-row span{
-
-
-    color:#777;
-
-
-}
-
-
-
-
-
-.ticket-row strong{
-
-
-    color:#8b4513;
-
-
-    text-align:right;
-
-
-}
-
 
 
 
@@ -1904,19 +920,16 @@ to{
 .ticket-title-box{
 
 
-    text-align:center;
+background:#020617;
 
 
-    margin:25px 0;
+color:white;
 
 
-    font-weight:bold;
+padding:10px;
 
 
-    letter-spacing:2px;
-
-
-    color:#e67e22;
+margin:20px 0;
 
 
 }
@@ -1925,113 +938,9 @@ to{
 
 
 
+.qr-section img{
 
-/* QR CODE */
-
-
-.qr-section{
-
-
-    text-align:center;
-
-
-    margin:25px 0;
-
-
-}
-
-
-
-
-
-#qrcode{
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-}
-
-
-
-
-
-#qrcode img{
-
-
-    width:90px;
-
-
-    height:90px;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* FOOTER INSIDE TICKET */
-
-
-.ticket-footer{
-
-
-    text-align:center;
-
-
-    font-size:13px;
-
-
-    color:#666;
-
-
-    margin-top:20px;
-
-
-}
-
-
-
-
-
-.ticket-footer p:first-child{
-
-
-    font-weight:bold;
-
-
-    color:#8b4513;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* DOWNLOAD BUTTON */
-
-
-.ticket-download{
-
-
-    text-align:center;
-
-
-    margin-top:25px;
-
+margin:auto;
 
 }
 
@@ -2042,33 +951,19 @@ to{
 .ticket-download button{
 
 
-    width:55px;
+border:none;
 
 
-    height:55px;
+background:#38bdf8;
 
 
-    border:none;
+padding:12px;
 
 
-    border-radius:50%;
+border-radius:50%;
 
 
-
-    background:#8b4513;
-
-
-    color:white;
-
-
-
-    font-size:22px;
-
-
-    cursor:pointer;
-
-
-    transition:.3s;
+cursor:pointer;
 
 
 }
@@ -2076,85 +971,36 @@ to{
 
 
 
-
-.ticket-download button:hover{
-
-
-    background:#ffd700;
-
-
-    color:#8b4513;
-
-
-    transform:scale(1.1);
-
-
-}
-
-
-
-
-
-
-
-
-/* WHATSAPP BUTTON */
 
 
 .whatsapp-order-btn{
 
 
-    display:block;
+margin-top:30px;
 
 
-    margin:35px auto 0;
+padding:15px 30px;
 
 
-
-    background:#25D366;
-
-
-    color:white;
+border:none;
 
 
-
-    border:none;
-
-
-    padding:16px 35px;
+border-radius:30px;
 
 
-    border-radius:50px;
+background:#22c55e;
 
 
-
-    font-size:16px;
-
-
-    font-weight:bold;
+color:white;
 
 
-    cursor:pointer;
+font-size:18px;
 
 
-
-    transition:.3s;
+cursor:pointer;
 
 
 }
-
-
-
-
-
-.whatsapp-order-btn:hover{
-
-
-    transform:translateY(-5px);
-
-
-}
-
 
 
 
@@ -2165,68 +1011,19 @@ to{
 
 
 /* ==========================
-   CONTACT
+ CONTACT
 ========================== */
-
-
-.contact{
-
-
-    background:#8b4513;
-
-
-    color:white;
-
-
-    text-align:center;
-
-
-}
-
-
-
-
-
-.contact .section-title h2{
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-.contact .section-title p{
-
-
-    color:#eee;
-
-
-}
-
-
-
-
-
 
 
 .contact-links{
 
+display:flex;
 
-    display:flex;
+justify-content:center;
 
+gap:20px;
 
-    justify-content:center;
-
-
-    flex-wrap:wrap;
-
-
-    gap:20px;
-
+flex-wrap:wrap;
 
 }
 
@@ -2237,52 +1034,16 @@ to{
 .contact-links a{
 
 
-    display:flex;
+background:#0f172a;
 
 
-    align-items:center;
+padding:15px 25px;
 
 
-    gap:10px;
-
-
-    background:#ffd700;
-
-
-    color:#8b4513;
-
-
-    padding:15px 30px;
-
-
-    border-radius:50px;
-
-
-    font-weight:bold;
-
-
-    transition:.3s;
+border-radius:30px;
 
 
 }
-
-
-
-
-
-.contact-links a:hover{
-
-
-    background:white;
-
-
-    transform:translateY(-5px);
-
-
-}
-
-
-
 
 
 
@@ -2291,34 +1052,10 @@ to{
 .business-info{
 
 
-    max-width:600px;
+text-align:center;
 
 
-    margin:40px auto 0;
-
-
-    padding:25px;
-
-
-    background:rgba(255,255,255,.1);
-
-
-    border-radius:20px;
-
-
-}
-
-
-
-
-
-.business-info h3{
-
-
-    color:#ffd700;
-
-
-    margin-bottom:20px;
+margin-top:40px;
 
 
 }
@@ -2332,23 +1069,23 @@ to{
 
 
 /* ==========================
-   FOOTER
+ FOOTER
 ========================== */
 
 
 footer{
 
 
-    background:#3b1f0b;
+background:#000;
 
 
-    color:white;
+text-align:center;
 
 
-    text-align:center;
+padding:25px;
 
 
-    padding:20px;
+color:#94a3b8;
 
 
 }
@@ -2362,150 +1099,52 @@ footer{
 
 
 /* ==========================
-   MOBILE RESPONSIVE
+ MOBILE
 ========================== */
 
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+
+.hero-container,
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.hero-content h1{
+
+font-size:40px;
+
+}
 
 
 
 .nav-links{
 
-
-    position:absolute;
-
-
-    top:85px;
-
-
-    left:0;
-
-
-    width:100%;
-
-
-    background:#8b4513;
-
-
-    flex-direction:column;
-
-
-    text-align:center;
-
-
-    padding:25px 0;
-
-
-    display:none;
-
+display:none;
 
 }
-
-
-
-
-.nav-links.active{
-
-
-    display:flex;
-
-
-}
-
 
 
 
 .menu-toggle{
 
-
-    display:block;
-
+display:block;
 
 }
 
 
 
+.gallery-container,
 
+.feature-box{
 
-.hero h1{
-
-
-    font-size:38px;
-
-
-}
-
-
-
-
-
-.hero p{
-
-
-    font-size:17px;
-
-
-}
-
-
-
-
-
-.about-container{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-
-.section-title h2{
-
-
-    font-size:30px;
-
-
-}
-
-
-
-
-.contact-links{
-
-
-    flex-direction:column;
-
-
-}
-
-
-
-
-
-.contact-links a{
-
-
-    justify-content:center;
-
-
-    width:100%;
-
-
-}
-
-
-
-
-
-.ticket{
-
-
-    width:100%;
-
+grid-template-columns:1fr;
 
 }
 

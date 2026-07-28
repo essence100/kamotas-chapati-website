@@ -22,7 +22,7 @@ body{
 
 img{
 
-    max-width:100%;
+    width:100%;
     display:block;
 
 }
@@ -35,6 +35,12 @@ a{
 }
 
 
+section{
+
+    padding:80px 8%;
+
+}
+
 
 /* ==========================
    NAVBAR
@@ -46,10 +52,10 @@ header{
     position:fixed;
     width:100%;
     top:0;
-    left:0;
     z-index:1000;
 
 }
+
 
 
 .navbar{
@@ -59,7 +65,7 @@ header{
     align-items:center;
     padding:15px 8%;
     background:#8b4513;
-    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
 
 }
 
@@ -69,10 +75,11 @@ header{
 
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
     color:white;
 
 }
+
 
 
 .logo img{
@@ -97,17 +104,17 @@ header{
 .nav-links{
 
     display:flex;
-    gap:30px;
+    gap:25px;
     list-style:none;
 
 }
+
 
 
 .nav-links a{
 
     color:white;
     font-weight:bold;
-    transition:.3s;
 
 }
 
@@ -133,274 +140,98 @@ header{
 
 
 
-
-
 /* ==========================
-   HERO SECTION
+ HERO
 ========================== */
 
 
 .hero{
 
-    min-height:100vh;
-
+    height:100vh;
 
     background:
 
     linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.55)
+        rgba(0,0,0,.6),
+        rgba(0,0,0,.6)
     ),
 
     url("../assets/images/restaurant.jpg");
 
 
     background-size:cover;
-
-
     background-position:center;
 
-
-    background-repeat:no-repeat;
-
-
     display:flex;
-
-
-    align-items:center;
-
-
     justify-content:center;
-
+    align-items:center;
 
     text-align:center;
 
-
     color:white;
 
-
-    position:relative;
-
-
 }
-
-
 
 
 
 .hero-content{
 
-
     max-width:800px;
 
-
-    padding:30px;
-
-
-    z-index:2;
-
-
-    animation:fadeHero 1.2s ease;
-
-
 }
-
-
 
 
 
 .hero h1{
 
-
     font-size:60px;
-
-
-    font-weight:800;
-
-
-    margin-bottom:25px;
-
-
-    line-height:1.2;
-
-
-    text-shadow:0 5px 20px rgba(0,0,0,.6);
-
+    margin-bottom:20px;
 
 }
-
-
 
 
 
 .hero p{
 
-
-    font-size:21px;
-
-
-    max-width:700px;
-
-
-    margin:0 auto 35px;
-
-
-    color:#f5f5f5;
-
-
-    line-height:1.8;
-
+    font-size:20px;
+    margin-bottom:30px;
 
 }
-
-
 
 
 
 .btn{
 
-
     display:inline-flex;
-
-
+    gap:10px;
     align-items:center;
 
-
-    gap:10px;
-
-
     background:#ffd700;
-
-
     color:#8b4513;
 
-
-    padding:16px 40px;
-
+    padding:15px 35px;
 
     border-radius:50px;
 
-
     font-weight:bold;
 
-
-    font-size:17px;
-
-
-    transition:.3s;
-
-
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
-
-
 }
-
-
 
 
 
 .btn:hover{
 
-
     background:white;
 
-
-    transform:translateY(-5px);
-
-
 }
 
 
 
-
-
-.btn i{
-
-
-    font-size:20px;
-
-
-}
-
-
-
-
-
-
-/* HERO ANIMATION */
-
-
-@keyframes fadeHero{
-
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
-    }
-
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-
-}
-
-
-
-
-
-
-/* MOBILE */
-
-
-@media(max-width:768px){
-
-
-.hero h1{
-
-    font-size:38px;
-
-}
-
-
-
-.hero p{
-
-    font-size:17px;
-
-}
-
-
-
-.hero-content{
-
-    padding:20px;
-
-}
-
-
-}
 
 
 /* ==========================
-   SECTION GENERAL
+ SECTION TITLE
 ========================== */
-
-
-section{
-
-    padding:80px 8%;
-
-}
-
 
 
 .section-title{
@@ -411,233 +242,98 @@ section{
 }
 
 
+
 .section-title h2{
 
-    font-size:35px;
     color:#8b4513;
+    font-size:38px;
 
 }
-
-
-.section-title p{
-
-    color:#777;
-
-}
-
-
 
 
 
 
 
 /* ==========================
-   ABOUT SECTION
+ ABOUT
 ========================== */
 
 
 .about-container{
 
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
     gap:50px;
-
     align-items:center;
 
 }
 
 
 
-
-
 .about-image img{
 
-
     border-radius:25px;
-
-
-    box-shadow:
-
-    0 15px 35px rgba(0,0,0,.2);
-
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
 
 }
-
-
 
 
 
 .about-text h3{
 
-
+    font-size:30px;
     color:#8b4513;
 
-
-    font-size:30px;
-
-
-    margin-bottom:20px;
-
-
 }
-
-
-
-
-
-.about-text p{
-
-
-    margin-bottom:18px;
-
-
-    font-size:17px;
-
-
-}
-
-
-
-
-
-
-
-.about-details{
-
-
-    margin-top:25px;
-
-
-}
-
-
 
 
 
 .about-details div{
 
-
     margin:15px 0;
-
-
     font-weight:bold;
 
-
-    color:#555;
-
-
 }
-
-
 
 
 
 .about-details i{
 
-
     color:#e67e22;
-
-
     margin-right:10px;
 
-
 }
-
-
 
 
 
 .about-btn{
 
-
     display:inline-block;
 
-
-    margin-top:20px;
-
-
     background:#8b4513;
-
-
     color:white;
 
-
-    padding:13px 30px;
-
+    padding:12px 30px;
 
     border-radius:30px;
 
-
-    font-weight:bold;
-
-
-    transition:.3s;
-
-
 }
-
-
-
-
-
-.about-btn:hover{
-
-
-    background:#ffd700;
-
-
-    color:#8b4513;
-
-
-}
-
-
-
-
-
-
-@media(max-width:768px){
-
-
-.about-container{
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-.about-text h3{
-
-
-    font-size:25px;
-
-
-}
-
-
-}
-
-
 
 
 
 
 
 /* ==========================
-   MENU CARDS
+ MENU CARDS
 ========================== */
 
 
 .cards{
 
     display:grid;
+
     grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
+    repeat(auto-fit,minmax(260px,1fr));
 
     gap:30px;
 
@@ -648,19 +344,14 @@ section{
 .card{
 
     background:white;
+
     border-radius:20px;
+
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
     text-align:center;
-
-}
-
-
-
-.card:hover{
-
-    transform:translateY(-10px);
 
 }
 
@@ -668,7 +359,6 @@ section{
 
 .card img{
 
-    width:100%;
     height:220px;
     object-fit:cover;
 
@@ -679,7 +369,7 @@ section{
 .card h3{
 
     color:#8b4513;
-    margin:20px 0 10px;
+    margin:20px;
 
 }
 
@@ -696,7 +386,7 @@ section{
 .card h4{
 
     color:#e67e22;
-    margin:15px;
+    margin:20px;
 
 }
 
@@ -705,16 +395,15 @@ section{
 
 
 
-
-
 /* ==========================
-   GALLERY
+ GALLERY
 ========================== */
 
 
 .gallery-container{
 
     display:grid;
+
     grid-template-columns:
     repeat(auto-fit,minmax(250px,1fr));
 
@@ -727,21 +416,12 @@ section{
 .gallery-container img{
 
     height:250px;
-    width:100%;
+
     object-fit:cover;
+
     border-radius:20px;
-    transition:.3s;
 
 }
-
-
-.gallery-container img:hover{
-
-    transform:scale(1.05);
-
-}
-
-
 
 
 
@@ -749,18 +429,18 @@ section{
 
 
 /* ==========================
-   FEATURES
+ FEATURES
 ========================== */
 
 
 .feature-box{
 
     display:grid;
+
     grid-template-columns:
     repeat(auto-fit,minmax(250px,1fr));
 
     gap:30px;
-    text-align:center;
 
 }
 
@@ -769,9 +449,14 @@ section{
 .feature-box div{
 
     background:white;
+
     padding:35px;
+
+    text-align:center;
+
     border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
 
 }
 
@@ -780,14 +465,10 @@ section{
 .feature-box i{
 
     font-size:40px;
+
     color:#e67e22;
-    margin-bottom:15px;
 
 }
-
-
-
-
 
 
 
@@ -796,16 +477,8 @@ section{
 
 
 /* ==========================
-   ORDER FORM
+ ORDER FORM
 ========================== */
-
-
-.order{
-
-    background:#fffaf2;
-
-}
-
 
 
 .order-form{
@@ -824,7 +497,6 @@ section{
 
 
 
-
 .order-form input,
 .order-form select,
 .order-form textarea{
@@ -832,14 +504,11 @@ section{
 
     padding:15px;
 
-    border:1px solid #ddd;
-
     border-radius:15px;
 
+    border:1px solid #ddd;
+
     font-size:16px;
-
-    outline:none;
-
 
 }
 
@@ -849,47 +518,25 @@ section{
 
     height:120px;
 
-    resize:none;
-
 }
-
-
-
-
-
-.order-form input:focus,
-.order-form select:focus,
-.order-form textarea:focus{
-
-    border-color:#8b4513;
-
-}
-
-
 
 
 
 .order-btn{
 
-
     background:#25D366;
 
     color:white;
 
-    padding:16px;
-
     border:none;
+
+    padding:16px;
 
     border-radius:50px;
 
     font-size:18px;
 
-    font-weight:bold;
-
     cursor:pointer;
-
-    transition:.3s;
-
 
 }
 
@@ -897,9 +544,164 @@ section{
 
 
 
-.order-btn:hover{
+/* ==========================
+ TICKET
+========================== */
 
-    transform:translateY(-5px);
+
+.ticket-section{
+
+    display:none;
+
+    padding:50px 8%;
+
+}
+
+
+
+.ticket{
+
+    max-width:430px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+    animation:showTicket .5s ease;
+
+}
+
+
+
+@keyframes showTicket{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+.ticket-logo{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+}
+
+
+
+.ticket h2{
+
+    text-align:center;
+
+    color:#8b4513;
+
+}
+
+
+
+.ticket-title{
+
+    text-align:center;
+
+    font-weight:bold;
+
+    color:#e67e22;
+
+}
+
+
+
+.ticket p{
+
+    margin:12px 0;
+
+}
+
+
+
+.ticket-download{
+
+    text-align:center;
+
+}
+
+
+
+.ticket-download button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#8b4513;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+
+
+.ticket-download button:hover{
+
+    background:#ffd700;
+
+    color:#8b4513;
+
+}
+
+
+
+.whatsapp-order-btn{
+
+    display:block;
+
+    margin:25px auto;
+
+    background:#25D366;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    cursor:pointer;
 
 }
 
@@ -910,16 +712,17 @@ section{
 
 
 /* ==========================
-   CONTACT SECTION
+ CONTACT
 ========================== */
 
 
 .contact{
 
     background:#8b4513;
+
     color:white;
+
     text-align:center;
-    padding:80px 8%;
 
 }
 
@@ -928,179 +731,54 @@ section{
 .contact .section-title h2{
 
     color:white;
-    font-size:35px;
 
 }
 
 
-
-.contact .section-title p{
-
-    color:#f5f5f5;
-
-}
-
-
-
-
-/* CONTACT BUTTONS */
 
 .contact-links{
 
     display:flex;
+
     justify-content:center;
-    align-items:center;
+
     flex-wrap:wrap;
+
     gap:20px;
-    margin-top:30px;
 
 }
-
 
 
 
 .contact-links a{
 
-    display:flex;
-    align-items:center;
-    gap:10px;
-
     background:#ffd700;
+
     color:#8b4513;
 
-    padding:15px 30px;
+    padding:15px 25px;
 
-    border-radius:50px;
+    border-radius:40px;
 
     font-weight:bold;
 
-    transition:.3s;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-
 }
 
-
-
-
-.contact-links a:hover{
-
-    transform:translateY(-5px);
-
-    background:white;
-
-    color:#8b4513;
-
-}
-
-
-
-
-.contact-links i{
-
-    font-size:20px;
-
-}
-
-
-
-
-
-
-/* BUSINESS INFORMATION */
 
 
 .business-info{
 
-    margin-top:45px;
-
-    padding:25px;
-
-    background:rgba(255,255,255,0.1);
-
-    border-radius:20px;
+    margin:40px auto 0;
 
     max-width:600px;
 
-    margin-left:auto;
+    background:rgba(255,255,255,.1);
 
-    margin-right:auto;
+    padding:25px;
 
-}
-
-
-
-
-.business-info h3{
-
-    color:#ffd700;
-
-    margin-bottom:20px;
-
-    font-size:25px;
+    border-radius:20px;
 
 }
-
-
-
-
-.business-info p{
-
-    margin:12px 0;
-
-    font-size:17px;
-
-}
-
-
-
-
-.business-info i{
-
-    color:#ffd700;
-
-    margin-right:10px;
-
-}
-
-
-
-
-
-
-
-/* MOBILE CONTACT */
-
-@media(max-width:768px){
-
-
-.contact-links{
-
-    flex-direction:column;
-
-}
-
-
-.contact-links a{
-
-    width:100%;
-
-    justify-content:center;
-
-}
-
-
-
-.business-info{
-
-    padding:20px;
-
-}
-
-
-}
-
-
 
 
 
@@ -1108,15 +786,18 @@ section{
 
 
 /* ==========================
-   FOOTER
+ FOOTER
 ========================== */
 
 
 footer{
 
     background:#3b1f0b;
+
     color:white;
+
     text-align:center;
+
     padding:20px;
 
 }
@@ -1125,46 +806,33 @@ footer{
 
 
 
-
-
-
 /* ==========================
-   MOBILE RESPONSIVE
+ MOBILE
 ========================== */
 
 
 @media(max-width:768px){
 
 
-.navbar{
-
-    padding:15px 5%;
-
-}
-
-
-
-.menu-toggle{
-
-    display:block;
-
-}
-
-
-
 .nav-links{
 
     position:absolute;
-    top:85px;
+
+    top:80px;
+
     left:0;
+
     width:100%;
+
     background:#8b4513;
 
     flex-direction:column;
+
     text-align:center;
 
     display:none;
-    padding:25px 0;
+
+    padding:20px;
 
 }
 
@@ -1178,9 +846,17 @@ footer{
 
 
 
+.menu-toggle{
+
+    display:block;
+
+}
+
+
+
 .hero h1{
 
-    font-size:35px;
+    font-size:38px;
 
 }
 
@@ -1202,177 +878,20 @@ footer{
 
 
 
-.section-title h2{
+.contact-links{
 
-    font-size:30px;
-
-}
-
-
+    flex-direction:column;
 
 }
 
 
 
+.contact-links a{
 
-
-
-/* ==========================
-   ORDER TICKET SECTION
-========================== */
-
-.ticket-section{
-
-    display:none;
-    padding:50px 8%;
-    opacity:1 !important;
-    transform:none !important;
+    width:100%;
 
 }
 
 
-
-
-.ticket{
-
-    max-width:450px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-    text-align:center;
-    color:#333;
-
-    animation:ticketAppear .5s ease;
-
-}
-
-@keyframes ticketAppear{
-
-    from{
-
-        opacity:0;
-        transform:translateY(30px);
-
-    }
-
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-/* ==========================
-   DOWNLOAD INSIDE TICKET
-========================== */
-
-
-.ticket-download{
-
-    text-align:center;
-    margin-top:25px;
-
-}
-
-
-
-.ticket-download button{
-
-
-    width:55px;
-    height:55px;
-
-    border-radius:50%;
-
-    border:none;
-
-    background:#25D366;
-
-    color:white;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-
-}
-
-
-
-.ticket-download button:hover{
-
-    transform:scale(1.1);
-
-}
-
-
-
-.ticket-download p{
-
-    text-align:center;
-
-    font-size:14px;
-
-    margin-top:8px;
-
-    color:#555;
-
-}
-
-
-
-
-
-
-
-/* ==========================
-   WHATSAPP BUTTON BELOW TICKET
-========================== */
-
-
-.whatsapp-order-btn{
-
-
-    display:block;
-
-    margin:25px auto;
-
-    padding:15px 30px;
-
-    border:none;
-
-    border-radius:30px;
-
-    background:#25D366;
-
-    color:white;
-
-    font-size:16px;
-
-    cursor:pointer;
-
-
-}
-
-
-
-.whatsapp-order-btn i{
-
-    margin-right:8px;
 
 }

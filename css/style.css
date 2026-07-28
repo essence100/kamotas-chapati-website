@@ -1152,6 +1152,29 @@ translateY(0);
    MENU SECTION
 ========================== */
 
+/* ==========================
+   MENU LOGO
+========================== */
+
+
+.menu-logo{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:0 auto 20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.2);
+
+}
+
+
 
 .cards{
 

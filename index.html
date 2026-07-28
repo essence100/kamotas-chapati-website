@@ -432,11 +432,7 @@ Place Order
 
 </section>
 
-  <!-- ==========================
-     ORDER TICKET
-========================== -->
-
-<!-- ==========================
+ <!-- ==========================
      PROFESSIONAL ORDER TICKET
 ========================== -->
 
@@ -446,14 +442,20 @@ Place Order
 <div class="ticket">
 
 
+
+<!-- HEADER -->
+
 <div class="ticket-header">
 
 
 <img src="assets/images/logo.png"
-class="ticket-logo">
+class="ticket-logo"
+alt="Kamotas Logo">
 
 
-<h2>KAMOTAS CHAPATI</h2>
+<h2>
+KAMOTAS CHAPATI
+</h2>
 
 
 <p>
@@ -461,12 +463,19 @@ Fresh Taste • Quality Service
 </p>
 
 
+
 <span class="ticket-status">
+
+<i class="fa-solid fa-circle-check"></i>
+
 ORDER RECEIVED
+
 </span>
 
 
+
 </div>
+
 
 
 
@@ -476,7 +485,22 @@ ORDER RECEIVED
 
 
 
+
+<!-- ORDER SUMMARY -->
+
+
+<div class="ticket-title-box">
+
+ORDER SUMMARY
+
+</div>
+
+
+
+
+
 <div class="ticket-info">
+
 
 
 <div class="ticket-row">
@@ -486,9 +510,11 @@ Order ID
 </span>
 
 <strong id="orderId">
+
 </strong>
 
 </div>
+
 
 
 
@@ -499,6 +525,7 @@ Customer
 </span>
 
 <strong id="ticketName">
+
 </strong>
 
 </div>
@@ -513,6 +540,7 @@ Phone
 </span>
 
 <strong id="ticketPhone">
+
 </strong>
 
 </div>
@@ -529,7 +557,7 @@ Phone
 
 <div class="ticket-title-box">
 
-ORDER DETAILS
+MEAL DETAILS
 
 </div>
 
@@ -548,9 +576,11 @@ Meal
 </span>
 
 <strong id="ticketFood">
+
 </strong>
 
 </div>
+
 
 
 
@@ -561,22 +591,27 @@ Quantity
 </span>
 
 <strong id="ticketQuantity">
+
 </strong>
 
 </div>
+
+
 
 
 
 <div class="ticket-row">
 
 <span>
-Delivery Location
+Delivery
 </span>
 
 <strong id="ticketLocation">
+
 </strong>
 
 </div>
+
 
 
 
@@ -588,6 +623,7 @@ Message
 </span>
 
 <strong id="ticketMessage">
+
 </strong>
 
 </div>
@@ -607,42 +643,110 @@ Message
 
 
 
-<div class="ticket-footer">
+
+
+<!-- QR CODE -->
+
+<div class="qr-section">
+
+
+<h4>
+SCAN QR
+</h4>
+
+
+
+<div id="qrcode"></div>
+
 
 
 <p>
-Thank you for ordering with us ❤️
+Kamotas Chapati Contact
 </p>
 
-
-<p>
-Kamotas Chapati • Dodoma
-</p>
-
-
-<p>
-0782 722 871
-</p>
 
 
 </div>
 
 
 
+
+
+
+
+<hr>
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<div class="ticket-footer">
+
+
+<p>
+
+❤️ Thank you for choosing Kamotas Chapati
+
+</p>
+
+
+
+<p>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Dodoma • St John • CBE • UDOM • Mipango
+
+</p>
+
+
+
+
+<p>
+
+<i class="fa-solid fa-phone"></i>
+
++255 782 722 871
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- DOWNLOAD BUTTON -->
 
 
 <div class="ticket-download">
 
 
-<button onclick="downloadTicketImage()">
+<button 
+
+onclick="downloadTicketImage()"
+
+title="Download Ticket Image">
+
 
 <i class="fa-solid fa-download"></i>
+
 
 </button>
 
 
+
 <p>
-Download Ticket
+Download Ticket Image
 </p>
 
 
@@ -650,17 +754,28 @@ Download Ticket
 
 
 
+
+
 </div>
 
 
 
 
+
+
+
+<!-- WHATSAPP BUTTON -->
+
+
 <button 
+
 onclick="sendTicketWhatsApp()"
+
 class="whatsapp-order-btn">
 
 
 <i class="fa-brands fa-whatsapp"></i>
+
 
 Send Order WhatsApp
 
@@ -669,8 +784,13 @@ Send Order WhatsApp
 
 
 
+
+
 </section>
 
+
+
+     
 
 <!-- ==========================
      CONTACT
@@ -790,8 +910,11 @@ Send Order WhatsApp
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-<script src="js/script.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+<script src="js/script.js"></script>
 </body>
 
 </html>

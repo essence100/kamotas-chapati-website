@@ -442,40 +442,101 @@ Place Order
 <div class="ticket">
 
 
-
-<!-- HEADER -->
-
 <div class="ticket-header">
 
-
-<img src="assets/images/logo.png"
-class="ticket-logo"
-alt="Kamotas Logo">
+<img src="assets/images/logo.png" class="ticket-logo">
 
 
-<h2>
-KAMOTAS CHAPATI
-</h2>
+<h2>KAMOTAS CHAPATI</h2>
 
 
 <p>
-Fresh Taste • Quality Service
+ORDER RECEIPT
 </p>
 
 
-
 <span class="ticket-status">
-
-<i class="fa-solid fa-circle-check"></i>
-
-ORDER RECEIVED
-
+RECEIVED
 </span>
+
+
+</div>
+
+
+
+<hr>
+
+
+
+<div class="ticket-info">
+
+
+<div class="ticket-row">
+<span>Order ID</span>
+<strong id="orderId"></strong>
+</div>
+
+
+<div class="ticket-row">
+<span>Customer</span>
+<strong id="ticketName"></strong>
+</div>
+
+
+
+<div class="ticket-row">
+<span>Phone</span>
+<strong id="ticketPhone"></strong>
+</div>
 
 
 
 </div>
 
+
+
+
+<div class="ticket-title-box">
+
+ORDER DETAILS
+
+</div>
+
+
+
+
+<div class="ticket-info">
+
+
+<div class="ticket-row">
+<span>Meal</span>
+<strong id="ticketFood"></strong>
+</div>
+
+
+
+<div class="ticket-row">
+<span>Qty</span>
+<strong id="ticketQuantity"></strong>
+</div>
+
+
+
+<div class="ticket-row">
+<span>Location</span>
+<strong id="ticketLocation"></strong>
+</div>
+
+
+
+<div class="ticket-row">
+<span>Note</span>
+<strong id="ticketMessage"></strong>
+</div>
+
+
+
+</div>
 
 
 
@@ -485,155 +546,11 @@ ORDER RECEIVED
 
 
 
+<div class="qr-section">
 
-<!-- ORDER SUMMARY -->
-
-
-<div class="ticket-title-box">
-
-ORDER SUMMARY
+<div id="qrcode"></div>
 
 </div>
-
-
-
-
-
-<div class="ticket-info">
-
-
-
-<div class="ticket-row">
-
-<span>
-Order ID
-</span>
-
-<strong id="orderId">
-
-</strong>
-
-</div>
-
-
-
-
-<div class="ticket-row">
-
-<span>
-Customer
-</span>
-
-<strong id="ticketName">
-
-</strong>
-
-</div>
-
-
-
-
-<div class="ticket-row">
-
-<span>
-Phone
-</span>
-
-<strong id="ticketPhone">
-
-</strong>
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="ticket-title-box">
-
-MEAL DETAILS
-
-</div>
-
-
-
-
-
-<div class="ticket-info">
-
-
-
-<div class="ticket-row">
-
-<span>
-Meal
-</span>
-
-<strong id="ticketFood">
-
-</strong>
-
-</div>
-
-
-
-
-<div class="ticket-row">
-
-<span>
-Quantity
-</span>
-
-<strong id="ticketQuantity">
-
-</strong>
-
-</div>
-
-
-
-
-
-<div class="ticket-row">
-
-<span>
-Delivery
-</span>
-
-<strong id="ticketLocation">
-
-</strong>
-
-</div>
-
-
-
-
-
-<div class="ticket-row">
-
-<span>
-Message
-</span>
-
-<strong id="ticketMessage">
-
-</strong>
-
-</div>
-
-
-
-</div>
-
-
-
 
 
 
@@ -643,8 +560,66 @@ Message
 
 
 
+<div class="ticket-footer">
 
 
+<p>
+Kamotas Chapati
+</p>
+
+
+<p>
+Dodoma
+</p>
+
+
+<p>
+0782 722 871
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="ticket-download">
+
+
+<button onclick="downloadTicketImage()">
+
+<i class="fa-solid fa-download"></i>
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<button 
+onclick="sendTicketWhatsApp()"
+class="whatsapp-order-btn">
+
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Send Order
+
+
+</button>
+
+
+
+</section>
 <!-- QR CODE -->
 
 <div class="qr-section">

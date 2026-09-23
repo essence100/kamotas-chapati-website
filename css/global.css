@@ -1,0 +1,1376 @@
+/* =========================================================
+   KAMOTAS CHAPATI
+   GLOBAL DESIGN SYSTEM
+========================================================= */
+
+
+/* =========================================================
+   1. DESIGN TOKENS
+========================================================= */
+
+:root {
+
+    /* Backgrounds */
+    --color-bg: #17120e;
+    --color-bg-soft: #211913;
+
+    /* Surfaces */
+    --color-surface: #2a2019;
+    --color-surface-light: #34271e;
+
+    /* Text */
+    --color-text: #fffaf2;
+    --color-text-soft: #cdbfb1;
+    --color-text-muted: #968679;
+
+    /* Brand */
+    --color-primary: #e96b32;
+    --color-primary-dark: #c95120;
+    --color-secondary: #f4b942;
+
+    /* States */
+    --color-success: #25a65a;
+    --color-danger: #dc4545;
+
+    /* Borders */
+    --color-border: rgba(255, 250, 242, 0.10);
+    --color-border-light: rgba(255, 250, 242, 0.16);
+
+    /* Shadows */
+    --shadow-sm:
+        0 8px 25px rgba(0, 0, 0, 0.16);
+
+    --shadow-md:
+        0 18px 45px rgba(0, 0, 0, 0.22);
+
+    --shadow-lg:
+        0 30px 80px rgba(0, 0, 0, 0.32);
+
+    /* Radius */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+
+    /* Layout */
+    --container-width: 1200px;
+    --header-height: 78px;
+
+    /* Motion */
+    --transition-fast: 180ms ease;
+    --transition-normal: 280ms ease;
+
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 90px;
+
+}
+
+
+body {
+
+    min-width: 320px;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--color-bg);
+
+    color: var(--color-text);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+
+body.menu-open,
+body.checkout-open {
+
+    overflow: hidden;
+
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+button,
+input,
+select,
+textarea {
+
+    font: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+ul,
+ol {
+
+    list-style: none;
+
+}
+
+
+/* =========================================================
+   3. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+
+    line-height: 1.15;
+
+}
+
+
+h1,
+h2 {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+}
+
+
+::selection {
+
+    background: var(--color-primary);
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   4. CONTAINER
+========================================================= */
+
+.container {
+
+    width:
+        min(
+            calc(100% - 40px),
+            var(--container-width)
+        );
+
+    margin-inline: auto;
+
+}
+
+
+/* =========================================================
+   5. SITE HEADER
+========================================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom:
+        1px solid var(--color-border);
+
+    background:
+        rgba(23, 18, 14, 0.88);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+}
+
+
+.navbar {
+
+    position: relative;
+
+    min-height: var(--header-height);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+}
+
+
+/* =========================================================
+   6. BRAND
+========================================================= */
+
+.brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    flex-shrink: 0;
+
+}
+
+
+.brand-logo {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border:
+        2px solid
+        rgba(244, 185, 66, 0.55);
+
+    background:
+        var(--color-surface);
+
+}
+
+
+.brand-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+
+}
+
+
+.brand-text strong {
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.4px;
+
+}
+
+
+.brand-text small {
+
+    margin-top: 4px;
+
+    color: var(--color-secondary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   7. NAVIGATION
+========================================================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    position: relative;
+
+    color: var(--color-text-soft);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        color var(--transition-fast);
+
+}
+
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    background:
+        var(--color-primary);
+
+    transition:
+        width var(--transition-fast);
+
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+
+    color: var(--color-text);
+
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   8. ORDER BUTTON
+========================================================= */
+
+.nav-order-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 42px;
+
+    padding: 11px 18px;
+
+    border-radius: 999px;
+
+    background:
+        var(--color-primary);
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        transform var(--transition-fast),
+        background var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+
+.nav-order-btn:hover {
+
+    background:
+        var(--color-primary-dark);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(233, 107, 50, 0.25);
+
+}
+
+
+.nav-order-btn:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   9. MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 44px;
+
+    height: 44px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        var(--color-border-light);
+
+    border-radius: 12px;
+
+    background:
+        var(--color-surface);
+
+    color:
+        var(--color-text);
+
+    font-size: 18px;
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+
+.menu-toggle:hover {
+
+    background:
+        var(--color-surface-light);
+
+    border-color:
+        rgba(244, 185, 66, 0.35);
+
+}
+
+
+.menu-toggle:active {
+
+    transform:
+        scale(0.96);
+
+}
+
+
+/* =========================================================
+   10. PAGE LOADING
+========================================================= */
+
+.page-loading {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 40px 20px;
+
+    color:
+        var(--color-text-muted);
+
+    text-align: center;
+
+}
+
+
+.loading-spinner {
+
+    width: 42px;
+
+    height: 42px;
+
+    border:
+        4px solid
+        var(--color-border-light);
+
+    border-top-color:
+        var(--color-primary);
+
+    border-radius: 50%;
+
+    animation:
+        kamotasSpin
+        0.8s linear infinite;
+
+}
+
+
+@keyframes kamotasSpin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   11. COMMON BUTTON
+========================================================= */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 48px;
+
+    padding: 12px 22px;
+
+    border: 0;
+
+    border-radius: 999px;
+
+    background:
+        var(--color-primary);
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    transition:
+        transform var(--transition-fast),
+        background var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+
+.btn:hover {
+
+    background:
+        var(--color-primary-dark);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(233, 107, 50, 0.22);
+
+}
+
+
+.btn:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   12. DYNAMIC PAGE GREETING
+========================================================= */
+
+.page-greeting {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    max-width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 9px 14px;
+
+    border:
+        1px solid
+        var(--color-border-light);
+
+    border-radius: 999px;
+
+    background:
+        rgba(42, 32, 25, 0.78);
+
+    color:
+        var(--color-text-soft);
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: 0.04em;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 0, 0, 0.14);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    transition:
+        transform var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+
+}
+
+
+.page-greeting:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(244, 185, 66, 0.35);
+
+    box-shadow:
+        0 12px 28px
+        rgba(0, 0, 0, 0.20);
+
+}
+
+
+/* Greeting time */
+
+.page-greeting .greeting-time {
+
+    color:
+        var(--color-secondary);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+}
+
+
+/* Greeting divider */
+
+.page-greeting::after {
+
+    content: "•";
+
+    color:
+        var(--color-primary);
+
+    font-size: 0.8rem;
+
+    flex-shrink: 0;
+
+}
+
+
+/* Greeting message */
+
+.page-greeting .greeting-message {
+
+    color:
+        var(--color-text-soft);
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.01em;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================================
+   13. PAGE ERROR
+========================================================= */
+
+.page-error {
+
+    min-height: 70vh;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 40px 20px;
+
+    background:
+        var(--color-bg-soft);
+
+    color:
+        var(--color-text);
+
+    text-align: center;
+
+}
+
+
+.page-error > div {
+
+    width:
+        min(
+            100%,
+            650px
+        );
+
+}
+
+
+.page-error .eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color:
+        var(--color-primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+}
+
+
+.page-error h1 {
+
+    margin-bottom: 12px;
+
+    font-size:
+        clamp(
+            32px,
+            5vw,
+            55px
+        );
+
+}
+
+
+.page-error p {
+
+    margin-bottom: 25px;
+
+    color:
+        var(--color-text-muted);
+
+}
+
+
+.page-error button {
+
+    min-height: 46px;
+
+    padding:
+        0 22px;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    background:
+        var(--color-primary);
+
+    color: #ffffff;
+
+    font: inherit;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+
+.page-error button:hover {
+
+    background:
+        var(--color-primary-dark);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   14. SITE FOOTER
+========================================================= */
+
+.site-footer {
+
+    margin-top: 50px;
+
+    border-top:
+        1px solid
+        var(--color-border);
+
+    background:
+        #100c09;
+
+}
+
+
+.footer-inner {
+
+    padding:
+        32px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        1fr;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+}
+
+
+.footer-brand img {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+
+.footer-brand div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+}
+
+
+.footer-brand strong {
+
+    font-size: 14px;
+
+}
+
+
+.footer-brand span {
+
+    color:
+        var(--color-text-muted);
+
+    font-size: 12px;
+
+}
+
+
+.footer-contact {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.footer-contact a {
+
+    color:
+        var(--color-text-soft);
+
+    font-size: 13px;
+
+    transition:
+        color var(--transition-fast);
+
+}
+
+
+.footer-contact a:hover {
+
+    color:
+        var(--color-primary);
+
+}
+
+
+.footer-contact i {
+
+    margin-right: 5px;
+
+}
+
+
+.footer-copy {
+
+    color:
+        var(--color-text-muted);
+
+    font-size: 12px;
+
+    text-align: right;
+
+}
+
+
+/* =========================================================
+   15. ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+
+    outline:
+        3px solid
+        rgba(244, 185, 66, 0.65);
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   16. TABLET / MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        gap: 14px;
+
+    }
+
+
+    .nav-order-btn {
+
+        display: none;
+
+    }
+
+
+    .menu-toggle {
+
+        display: inline-flex;
+
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top:
+            calc(100% + 1px);
+
+        left: 0;
+
+        right: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding:
+            10px 20px 20px;
+
+        background:
+            rgba(23, 18, 14, 0.98);
+
+        border-bottom:
+            1px solid
+            var(--color-border);
+
+        box-shadow:
+            var(--shadow-md);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform:
+            translateY(-8px);
+
+        transition:
+            opacity var(--transition-normal),
+            visibility var(--transition-normal),
+            transform var(--transition-normal);
+
+    }
+
+
+    .nav-links.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    .nav-links li {
+
+        width: 100%;
+
+    }
+
+
+    .nav-links a {
+
+        display: block;
+
+        width: 100%;
+
+        padding:
+            14px 5px;
+
+        border-bottom:
+            1px solid
+            var(--color-border);
+
+    }
+
+
+    .nav-links li:last-child a {
+
+        border-bottom: 0;
+
+    }
+
+
+    .nav-links a::after {
+
+        display: none;
+
+    }
+
+
+    .footer-inner {
+
+        grid-template-columns:
+            1fr;
+
+        text-align: center;
+
+    }
+
+
+    .footer-brand,
+    .footer-contact {
+
+        justify-content: center;
+
+    }
+
+
+    .footer-copy {
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   17. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-greeting {
+
+        gap: 7px;
+
+        margin-bottom: 14px;
+
+        padding:
+            8px 11px;
+
+    }
+
+
+    .page-greeting .greeting-time {
+
+        font-size: 0.66rem;
+
+    }
+
+
+    .page-greeting .greeting-message {
+
+        font-size: 0.68rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   18. VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+
+        width:
+            min(
+                calc(100% - 28px),
+                var(--container-width)
+            );
+
+    }
+
+
+    .navbar {
+
+        min-height: 70px;
+
+    }
+
+
+    .brand-logo {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .brand-text strong {
+
+        font-size: 17px;
+
+    }
+
+
+    .brand-text small {
+
+        font-size: 9px;
+
+    }
+
+
+    .footer-contact {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .page-greeting {
+
+        max-width: 100%;
+
+    }
+
+}
+
+
+@media (max-width: 360px) {
+
+    .page-greeting {
+
+        gap: 6px;
+
+        padding:
+            7px 9px;
+
+    }
+
+
+    .page-greeting .greeting-time,
+    .page-greeting .greeting-message {
+
+        font-size: 0.62rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   19. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+    }
+
+
+    .page-greeting:hover {
+
+        transform: none;
+
+    }
+
+}

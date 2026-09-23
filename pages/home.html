@@ -1,0 +1,580 @@
+<!-- =====================================================
+     KAMOTAS CHAPATI — HOME PAGE
+     ===================================================== -->
+
+<section class="home-page">
+
+
+<!-- =========================
+     HERO
+========================== -->
+<section class="hero-section">
+    <div class="container hero-grid">
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+            <!-- DYNAMIC GREETING -->
+            <div
+                class="page-greeting"
+                aria-label="Time based welcome"
+            >
+                <span data-greeting></span>
+            </div>
+
+            <span class="eyebrow">
+                <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                Fresh every single day
+            </span>
+
+            <h1>
+                Fresh Chapati.
+                <span>Real Taste.</span>
+            </h1>
+
+            <p class="hero-description">
+                Delicious, freshly prepared meals made
+                with quality ingredients and served with
+                the taste you love.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="#menu"
+                    class="btn hero-primary"
+                    data-page="menu"
+                >
+                    <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+                    <span>Explore Our Menu</span>
+                </a>
+
+                <a
+                    href="#about"
+                    class="hero-secondary"
+                    data-page="about"
+                >
+                    <span>Discover Kamotas</span>
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+            <!-- QUICK STATS -->
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+                    <strong>Fresh</strong>
+                    <span>Prepared daily</span>
+                </div>
+
+                <div class="stat-divider" aria-hidden="true"></div>
+
+                <div class="hero-stat">
+                    <strong>04:00 AM</strong>
+                    <span>Opening time</span>
+                </div>
+
+                <div class="stat-divider" aria-hidden="true"></div>
+
+                <div class="hero-stat">
+                    <strong>5+</strong>
+                    <span>Favourite meals</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- HERO VISUAL -->
+        <div class="hero-visual">
+
+            <div class="hero-image-wrap">
+
+                <img
+                    src="./assets/images/hero-food.jpg"
+                    alt="Fresh Kamotas Chapati meal"
+                    class="hero-image"
+                    loading="eager"
+                >
+
+                <div
+                    class="hero-image-overlay"
+                    aria-hidden="true"
+                ></div>
+
+                <!-- FLOATING PRICE CARD -->
+                <div class="hero-floating-card">
+
+                    <span
+                        class="floating-icon"
+                        aria-hidden="true"
+                    >
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+
+                    <div>
+                        <strong>Fresh Chapati</strong>
+                        <span>From Tsh 500</span>
+                    </div>
+
+                </div>
+
+                <!-- DECORATIVE ELEMENT -->
+                <div
+                    class="hero-decoration"
+                    aria-hidden="true"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     QUICK ORDER
+========================== -->
+<section class="quick-order-section">
+    <div class="container">
+
+        <div class="quick-order-header">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                    Quick Order
+                </span>
+
+                <h2>
+                    Hungry? Let's fix that.
+                </h2>
+
+                <p>
+                    Place your order in a few seconds
+                    and send it directly to Kamotas
+                    through WhatsApp.
+                </p>
+
+            </div>
+
+            <div class="order-badge">
+                <i
+                    class="fa-brands fa-whatsapp"
+                    aria-hidden="true"
+                ></i>
+
+                <span>WhatsApp ordering</span>
+            </div>
+
+        </div>
+
+
+        <div class="quick-order-card">
+
+            <!-- ORDER FORM -->
+            <form
+                id="quickOrderForm"
+                class="order-form"
+                novalidate
+            >
+
+                <!-- NAME -->
+                <div class="form-field">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <i
+                            class="fa-regular fa-user"
+                            aria-hidden="true"
+                        ></i>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="form-field">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <i
+                            class="fa-solid fa-phone"
+                            aria-hidden="true"
+                        ></i>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="e.g. 0782 722 871"
+                            autocomplete="tel"
+                            inputmode="tel"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEAL -->
+                <div class="form-field form-field-wide">
+
+                    <label for="food">
+                        Choose Your Meal
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <i
+                            class="fa-solid fa-bowl-food"
+                            aria-hidden="true"
+                        ></i>
+
+                        <select
+                            id="food"
+                            name="food"
+                            required
+                        >
+                            <option value="">
+                                Select your meal
+                            </option>
+
+                            <option value="Fresh Chapati">
+                                Fresh Chapati — Tsh 500
+                            </option>
+
+                            <option value="Maharage">
+                                Maharage — Tsh 500
+                            </option>
+
+                            <option value="Supu">
+                                Supu — Tsh 1,000
+                            </option>
+
+                            <option value="Fresh Juice">
+                                Fresh Juice — Tsh 1,000
+                            </option>
+
+                            <option value="Roast Maini">
+                                Roast Maini — Tsh 2,000
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUANTITY -->
+                <div class="form-field">
+
+                    <label for="quantity">
+                        Quantity
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <i
+                            class="fa-solid fa-hashtag"
+                            aria-hidden="true"
+                        ></i>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            name="quantity"
+                            min="1"
+                            step="1"
+                            value="1"
+                            inputmode="numeric"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+                <div class="form-field">
+
+                    <label for="location">
+                        Delivery Location
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <i
+                            class="fa-solid fa-location-dot"
+                            aria-hidden="true"
+                        ></i>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="Where should we deliver?"
+                            autocomplete="street-address"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div class="form-field form-field-wide">
+
+                    <label for="message">
+                        Additional Note
+                        <span>(optional)</span>
+                    </label>
+
+                    <div class="input-wrap textarea-wrap">
+
+                        <i
+                            class="fa-regular fa-note-sticky"
+                            aria-hidden="true"
+                        ></i>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="3"
+                            placeholder="Anything we should know?"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM FOOTER -->
+                <div class="order-form-footer">
+
+                    <div class="order-hint">
+
+                        <i
+                            class="fa-solid fa-shield-halved"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>
+                            Your order details are sent
+                            securely through WhatsApp.
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="order-submit-btn"
+                    >
+
+                        <i
+                            class="fa-brands fa-whatsapp"
+                            aria-hidden="true"
+                        ></i>
+
+                        <span>Place Order</span>
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                        ></i>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     WHY KAMOTAS
+========================== -->
+<section class="home-features">
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="section-eyebrow">
+                Why Kamotas
+            </span>
+
+            <h2>
+                Simple food.
+                <span>Done right.</span>
+            </h2>
+
+            <p>
+                Good ingredients, fresh preparation,
+                and service that keeps you coming back.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <!-- FEATURE 1 -->
+            <article class="feature-card">
+
+                <div
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+
+                <h3>
+                    Fresh Every Day
+                </h3>
+
+                <p>
+                    Our meals are prepared fresh so
+                    you get great taste in every bite.
+                </p>
+
+            </article>
+
+
+            <!-- FEATURE 2 -->
+            <article class="feature-card">
+
+                <div
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h3>
+                    Made With Care
+                </h3>
+
+                <p>
+                    We care about quality, flavour,
+                    and giving our customers a meal
+                    worth coming back for.
+                </p>
+
+            </article>
+
+
+            <!-- FEATURE 3 -->
+            <article class="feature-card">
+
+                <div
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>
+                    Easy Ordering
+                </h3>
+
+                <p>
+                    Choose your meal, send your details,
+                    and order directly through WhatsApp.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     LOCATION CTA
+========================== -->
+<section class="home-location">
+
+    <div class="container location-card">
+
+        <div
+            class="location-icon"
+            aria-hidden="true"
+        >
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+
+        <div class="location-content">
+
+            <span>
+                Find us in Dodoma
+            </span>
+
+            <h2>
+                St John • CBE • UDOM • Mipango
+            </h2>
+
+            <p>
+                Open daily from 04:00 AM to 11:00 PM.
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://www.google.com/maps/search/Dodoma+St+John+CBE+UDOM+Mipango"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="location-btn"
+            aria-label="Find Kamotas Chapati in Dodoma on Google Maps"
+        >
+            <i
+                class="fa-solid fa-map-location-dot"
+                aria-hidden="true"
+            ></i>
+
+            <span>Find Us</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+</section>

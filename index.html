@@ -3,1701 +3,352 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Kamotas Chapati — fresh chapati and delicious meals in Dodoma."
+    >
+
+    <meta
+        name="theme-color"
+        content="#17120e"
+    >
+
+    <title>Kamotas Chapati | Fresh Food Restaurant</title>
 
 
-<title>
-Kamotas Chapati | Fresh Food Restaurant
-</title>
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
 
-<link rel="stylesheet" href="css/style.css">
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
 
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- =====================================================
+         GLOBAL STYLES
+    ====================================================== -->
 
+    <link
+        rel="stylesheet"
+        href="./css/global.css"
+    >
+
+    <!--
+        Page-specific CSS is loaded dynamically
+        by js/main.js
+    -->
 
 </head>
 
 
 <body>
 
+    <!-- =====================================================
+         SITE HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <nav
+            class="navbar container"
+            aria-label="Main navigation"
+        >
+
+            <!-- BRAND -->
+
+            <a
+                href="#home"
+                class="brand"
+                data-page="home"
+                aria-label="Kamotas Chapati home"
+            >
+
+                <span class="brand-logo">
+
+                    <img
+                        src="./assets/images/logo.png"
+                        alt="Kamotas Chapati logo"
+                        width="48"
+                        height="48"
+                    >
+
+                </span>
+
+                <span class="brand-text">
+
+                    <strong>Kamotas</strong>
+
+                    <small>Chapati</small>
 
+                </span>
 
-<!-- ==========================
- NAVBAR
-========================== -->
+            </a>
 
 
-<header>
+            <!-- MOBILE MENU BUTTON -->
 
-<nav class="navbar">
+            <button
+                type="button"
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
 
+                <i
+                    class="fa-solid fa-bars"
+                    aria-hidden="true"
+                ></i>
+
+            </button>
 
-<div class="logo">
 
+            <!-- NAVIGATION -->
+
+            <ul
+                class="nav-links"
+                id="nav-links"
+            >
 
-<img src="assets/images/logo.png"
-alt="Kamotas Chapati Logo">
+                <li>
+                    <a
+                        href="#home"
+                        data-page="home"
+                    >
+                        Home
+                    </a>
+                </li>
 
+                <li>
+                    <a
+                        href="#about"
+                        data-page="about"
+                    >
+                        About
+                    </a>
+                </li>
 
-<h2>
-Kamotas Chapati
-</h2>
+                <li>
+                    <a
+                        href="#menu"
+                        data-page="menu"
+                    >
+                        Menu
+                    </a>
+                </li>
 
+                <li>
+                    <a
+                        href="#gallery"
+                        data-page="gallery"
+                    >
+                        Gallery
+                    </a>
+                </li>
 
-</div>
+                <li>
+                    <a
+                        href="#contact"
+                        data-page="contact"
+                    >
+                        Contact
+                    </a>
+                </li>
 
+            </ul>
 
 
+            <!-- ORDER CTA -->
 
+            <a
+                href="#menu"
+                class="nav-order-btn"
+                data-page="menu"
+            >
 
-<div class="menu-toggle" id="menu-toggle">
+                <i
+                    class="fa-solid fa-bag-shopping"
+                    aria-hidden="true"
+                ></i>
 
-<i class="fa-solid fa-bars"></i>
+                <span>Order Now</span>
 
-</div>
+            </a>
 
+        </nav>
 
+    </header>
 
 
+    <!-- =====================================================
+         APPLICATION
+    ====================================================== -->
 
-<ul class="nav-links" id="nav-links">
+    <main
+        id="app"
+        tabindex="-1"
+    >
 
+        <!--
+            Main page content is injected here
+            by js/main.js
+        -->
 
-<li>
-<a href="#home">
-Home
-</a>
-</li>
+        <section
+            class="page-loading"
+            aria-live="polite"
+            aria-label="Loading page"
+        >
 
+            <div
+                class="loading-spinner"
+                aria-hidden="true"
+            ></div>
 
-<li>
-<a href="#about">
-About
-</a>
-</li>
+            <p>Loading Kamotas...</p>
 
+        </section>
 
-<li>
-<a href="#menu">
-Menu
-</a>
-</li>
+    </main>
 
 
-<li>
-<a href="#gallery">
-Gallery
-</a>
-</li>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
+    <footer class="site-footer">
 
-<li>
-<a href="#contact">
-Contact
-</a>
-</li>
+        <div class="container footer-inner">
 
 
-</ul>
+            <!-- FOOTER BRAND -->
 
+            <div class="footer-brand">
 
-</nav>
+                <img
+                    src="./assets/images/logo.png"
+                    alt="Kamotas Chapati"
+                    width="42"
+                    height="42"
+                >
 
-</header>
+                <div>
 
+                    <strong>Kamotas Chapati</strong>
 
+                    <span>
+                        Fresh food. Great taste.
+                    </span>
 
+                </div>
 
+            </div>
 
 
-<!-- ==========================
- HERO + QUICK ORDER
-========================== -->
+            <!-- FOOTER CONTACT -->
 
+            <div
+                class="footer-contact"
+                aria-label="Contact information"
+            >
 
-<section class="hero" id="home">
+                <a href="tel:+255782722871">
 
+                    <i
+                        class="fa-solid fa-phone"
+                        aria-hidden="true"
+                    ></i>
 
-<div class="hero-container">
+                    <span>+255 782 722 871</span>
 
+                </a>
 
 
+                <a
+                    href="https://wa.me/255782722871"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
+                    <i
+                        class="fa-brands fa-whatsapp"
+                        aria-hidden="true"
+                    ></i>
 
-<!-- HERO CONTENT -->
+                    <span>WhatsApp</span>
 
+                </a>
 
-<div class="hero-content">
+            </div>
 
 
-<h1>
-Fresh Chapati Made With Love
-</h1>
+            <!-- COPYRIGHT -->
 
+            <p class="footer-copy">
 
+                ©
+                <span id="footer-year"></span>
 
-<p>
-Enjoy delicious, fresh and affordable meals prepared with quality ingredients.
-</p>
+                Kamotas Chapati.
+                All Rights Reserved.
 
+            </p>
 
+        </div>
 
+    </footer>
 
 
-<div class="hero-buttons">
+    <!-- =====================================================
+         THIRD-PARTY LIBRARIES
+    ====================================================== -->
 
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    ></script>
 
-<a href="#menu" class="btn">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    ></script>
 
 
-<i class="fa-solid fa-utensils"></i>
+    <!-- =====================================================
+         APPLICATION
+    ====================================================== -->
 
-View Menu
-
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- QUICK ORDER CARD -->
-
-
-<div class="hero-order">
-
-
-
-<div class="hero-order-title">
-
-
-<h2>
-Place Your Order
-</h2>
-
-
-<p>
-Order fresh meals instantly
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<form class="order-form"
-onsubmit="sendOrder(event)">
-
-
-
-
-
-
-<input
-
-type="text"
-
-id="name"
-
-placeholder="Your Name"
-
-required>
-
-
-
-
-
-
-
-<input
-
-type="tel"
-
-id="phone"
-
-placeholder="Phone Number"
-
-required>
-
-
-
-
-
-
-
-
-<select id="food" required>
-
-
-<option value="">
-
-Select Your Meal
-
-</option>
-
-
-<option>
-Fresh Chapati
-</option>
-
-
-<option>
-Chapati + Beans
-</option>
-
-
-<option>
-Chapati + Soup
-</option>
-
-
-<option>
-Chapati + Roast Maini
-</option>
-
-
-<option>
-Chapati + Juice
-</option>
-
-
-</select>
-
-
-
-
-
-
-
-<input
-
-type="number"
-
-id="quantity"
-
-placeholder="Quantity"
-
-required>
-
-
-
-
-
-
-
-
-<input
-
-type="text"
-
-id="location"
-
-placeholder="Delivery Location"
-
-required>
-
-
-
-
-
-
-
-
-<textarea
-
-id="message"
-
-placeholder="Additional Note">
-
-</textarea>
-
-
-
-
-
-
-
-<button
-
-type="submit"
-
-class="order-btn">
-
-
-<i class="fa-brands fa-whatsapp"></i>
-
-
-Place Order
-
-
-</button>
-
-
-
-
-</form>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ==========================
- ABOUT
-========================== -->
-
-
-<section class="about" id="about">
-
-
-
-<div class="section-title">
-
-
-<h2>
-About Us
-</h2>
-
-
-<p>
-Taste the difference with Kamotas Chapati
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="about-container">
-
-
-
-
-
-<div class="about-image">
-
-
-<img src="assets/images/restaurant.jpg"
-
-alt="Kamotas Restaurant">
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="about-text">
-
-
-
-<h3>
-Fresh Chapati, Great Taste, Happy Customers
-</h3>
-
-
-
-
-
-<p>
-
-Kamotas Chapati is a food restaurant based in Dodoma providing fresh meals prepared daily.
-
-</p>
-
-
-
-
-
-<p>
-
-Located around St John, CBE, UDOM and Mipango.
-
-</p>
-
-
-
-
-
-
-
-<div class="about-details">
-
-
-
-<div>
-
-<i class="fa-solid fa-location-dot"></i>
-
-Dodoma • St John • CBE • UDOM • Mipango
-
-</div>
-
-
-
-
-
-<div>
-
-<i class="fa-solid fa-clock"></i>
-
-Open Daily 04:00 AM - 11:00 PM
-
-</div>
-
-
-
-
-
-<div>
-
-<i class="fa-solid fa-utensils"></i>
-
-Fresh Meals Every Day
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-<a href="https://www.google.com/maps/search/Dodoma+St+John+CBE+UDOM+Mipango"
-
-target="_blank"
-
-class="about-btn">
-
-Find Us
-
-</a>
-
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ==========================
- MENU
-========================== -->
-
-
-<section class="menu" id="menu">
-
-
-
-
-
-<div class="section-title">
-
-
-
-<img src="assets/images/logo.png"
-
-class="menu-logo"
-
-alt="Kamotas Logo">
-
-
-
-
-
-<h2>
-Kamotas Chapati Menu
-</h2>
-
-
-
-
-<p>
-Fresh meals prepared daily
-</p>
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="cards">
-
-
-
-
-
-
-
-<!-- CHAPATI -->
-
-
-<div class="card">
-
-
-<img src="assets/images/chapati.jpg"
-
-alt="Fresh Chapati">
-
-
-<div class="menu-content">
-
-
-<h3>
-Fresh Chapati
-</h3>
-
-
-<p>
-Soft, fresh and tasty chapati made every day.
-</p>
-
-
-<h4>
-Tsh 500
-</h4>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- MAHARAGE -->
-
-
-<div class="card">
-
-
-<img src="assets/images/maharage.jpg"
-
-alt="Maharage">
-
-
-<div class="menu-content">
-
-
-<h3>
-Maharage
-</h3>
-
-
-<p>
-Hot cooked beans with great taste.
-</p>
-
-
-<h4>
-Tsh 500
-</h4>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- SUPU -->
-
-
-<div class="card">
-
-
-<img src="assets/images/supu.jpg"
-
-alt="Supu">
-
-
-<div class="menu-content">
-
-
-<h3>
-Supu
-</h3>
-
-
-<p>
-Fresh hot soup prepared daily.
-</p>
-
-
-<h4>
-Tsh 1,000
-</h4>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- JUICE -->
-
-
-<div class="card">
-
-
-<img src="assets/images/juice.jpg"
-
-alt="Fresh Juice">
-
-
-<div class="menu-content">
-
-
-<h3>
-Fresh Juice
-</h3>
-
-
-<p>
-Cold refreshing fruit juice.
-</p>
-
-
-<h4>
-Tsh 1,000
-</h4>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- ROAST MAINI -->
-
-
-<div class="card">
-
-
-<img src="assets/images/roast-maini.jpg"
-
-alt="Roast Maini">
-
-
-<div class="menu-content">
-
-
-<h3>
-Roast Maini
-</h3>
-
-
-<p>
-Delicious roasted maini prepared fresh.
-</p>
-
-
-<h4>
-Tsh 2,000
-</h4>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-</div>
-
-
-
-</section>
-
-
- <!-- ==========================
- GALLERY
-========================== -->
-
-
-<section class="gallery" id="gallery">
-
-
-<div class="section-title">
-
-
-<h2>
-Food Gallery
-</h2>
-
-
-<p>
-See what we prepare
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="gallery-container">
-
-
-
-<img src="assets/images/gallery-1.jpg"
-
-alt="Kamotas Food Gallery 1">
-
-
-
-
-
-<img src="assets/images/gallery-2.jpg"
-
-alt="Kamotas Food Gallery 2">
-
-
-
-
-
-<img src="assets/images/gallery-3.jpg"
-
-alt="Kamotas Restaurant Gallery">
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ==========================
- WHY CHOOSE US
-========================== -->
-
-
-<section class="features">
-
-
-
-<div class="section-title">
-
-
-<h2>
-Why Choose Us?
-</h2>
-
-
-<p>
-Quality service and fresh meals
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="feature-box">
-
-
-
-
-
-<div>
-
-
-<i class="fa-solid fa-utensils"></i>
-
-
-<h3>
-Fresh Food
-</h3>
-
-
-<p>
-Prepared fresh every day.
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div>
-
-
-<i class="fa-solid fa-star"></i>
-
-
-<h3>
-Quality Taste
-</h3>
-
-
-<p>
-Great taste customers love.
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div>
-
-
-<i class="fa-solid fa-clock"></i>
-
-
-<h3>
-Fast Service
-</h3>
-
-
-<p>
-Quick and reliable service.
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ==========================
- PROFESSIONAL ORDER TICKET
-========================== -->
-
-
-<section class="ticket-section"
-id="ticket">
-
-
-
-
-
-
-<div class="ticket">
-
-
-
-
-
-
-
-
-<div class="ticket-header">
-
-
-
-
-
-<img src="assets/images/logo.png"
-
-class="ticket-logo"
-
-alt="Kamotas Chapati Logo">
-
-
-
-
-
-<h2>
-KAMOTAS CHAPATI
-</h2>
-
-
-
-
-
-<p>
-ORDER RECEIPT
-</p>
-
-
-
-
-
-
-<span class="ticket-status">
-
-RECEIVED
-
-</span>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<hr>
-
-
-
-
-
-
-
-
-
-<div class="ticket-info">
-
-
-
-
-
-<div class="ticket-row">
-
-
-<span>
-Order ID
-</span>
-
-
-<strong id="orderId">
-</strong>
-
-
-</div>
-
-
-
-
-
-
-<div class="ticket-row">
-
-
-<span>
-Customer
-</span>
-
-
-<strong id="ticketName">
-</strong>
-
-
-</div>
-
-
-
-
-
-
-<div class="ticket-row">
-
-
-<span>
-Phone
-</span>
-
-
-<strong id="ticketPhone">
-</strong>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="ticket-title-box">
-
-ORDER DETAILS
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="ticket-info">
-
-
-
-
-
-<div class="ticket-row">
-
-
-<span>
-Meal
-</span>
-
-
-<strong id="ticketFood">
-</strong>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="ticket-row">
-
-
-<span>
-Quantity
-</span>
-
-
-<strong id="ticketQuantity">
-</strong>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="ticket-row">
-
-
-<span>
-Location
-</span>
-
-
-<strong id="ticketLocation">
-</strong>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="ticket-row">
-
-
-<span>
-Note
-</span>
-
-
-<strong id="ticketMessage">
-</strong>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<hr>
-
-
-
-
-
-
-
-
-
-<!-- QR CODE -->
-
-
-<div class="qr-section">
-
-
-<div id="qrcode"></div>
-
-
-
-<p>
-Scan Order
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<hr>
-
-
-
-
-
-
-
-
-
-<div class="ticket-footer">
-
-
-<p>
-Kamotas Chapati
-</p>
-
-
-
-<p>
-Dodoma
-</p>
-
-
-
-<p>
-+255 782 722 871
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- DOWNLOAD BUTTON -->
-
-
-<div class="ticket-download">
-
-
-<button
-
-onclick="downloadTicketImage()"
-
-title="Download Ticket">
-
-
-
-<i class="fa-solid fa-download"></i>
-
-
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- WHATSAPP SEND -->
-
-
-<button
-
-onclick="sendTicketWhatsApp()"
-
-class="whatsapp-order-btn">
-
-
-
-<i class="fa-brands fa-whatsapp"></i>
-
-
-
-Send Order WhatsApp
-
-
-
-</button>
-
-
-
-
-
-
-
-
-</section>
-
- <!-- ==========================
- CONTACT
-========================== -->
-
-
-<section class="contact" id="contact">
-
-
-
-<div class="section-title">
-
-
-<h2>
-Contact Us
-</h2>
-
-
-<p>
-We are ready to serve you.
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="contact-links">
-
-
-
-
-
-
-<a href="https://wa.me/255782722871"
-
-target="_blank">
-
-
-<i class="fa-brands fa-whatsapp"></i>
-
-
-WhatsApp
-
-
-</a>
-
-
-
-
-
-
-
-
-<a href="tel:+255782722871">
-
-
-<i class="fa-solid fa-phone"></i>
-
-
-Call Us
-
-
-</a>
-
-
-
-
-
-
-
-
-<a href="mailto:essencebenedict@gmail.com">
-
-
-<i class="fa-solid fa-envelope"></i>
-
-
-Email
-
-
-</a>
-
-
-
-
-
-
-
-
-<a href="https://instagram.com/benedict_charse"
-
-target="_blank">
-
-
-<i class="fa-brands fa-instagram"></i>
-
-
-Instagram
-
-
-</a>
-
-
-
-
-
-
-
-
-<a href="https://www.google.com/maps/search/Dodoma+St+John+CBE+UDOM+Mipango"
-
-target="_blank">
-
-
-<i class="fa-solid fa-location-dot"></i>
-
-
-Location
-
-
-</a>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="business-info">
-
-
-
-
-
-<h3>
-Kamotas Chapati
-</h3>
-
-
-
-
-
-
-
-<p>
-
-<i class="fa-solid fa-location-dot"></i>
-
-Dodoma • St John • CBE • UDOM • Mipango
-
-</p>
-
-
-
-
-
-
-
-
-<p>
-
-<i class="fa-solid fa-clock"></i>
-
-Open Daily: 04:00 AM - 11:00 PM
-
-</p>
-
-
-
-
-
-
-
-
-<p>
-
-<i class="fa-solid fa-phone"></i>
-
-+255 782 722 871
-
-</p>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- ==========================
- FOOTER
-========================== -->
-
-
-<footer>
-
-
-<p>
-
-© 2026 Kamotas Chapati |
-
-All Rights Reserved
-
-</p>
-
-
-
-</footer>
-
-
-
-
-
-
-
-
-
-<!-- ==========================
- JAVASCRIPT LIBRARIES
-========================== -->
-
-
-
-
-
-<!-- HTML TO IMAGE -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
-
-</script>
-
-
-
-
-
-
-
-<!-- QR CODE -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-
-</script>
-
-
-
-
-
-
-
-<!-- CUSTOM SCRIPT -->
-
-<script src="js/script.js">
-
-</script>
-
-
-
-
-
-
+    <script
+        type="module"
+        src="./js/main.js"
+    ></script>
 
 </body>
-
 
 </html>
